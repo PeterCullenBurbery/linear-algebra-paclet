@@ -11,7 +11,7 @@ BeginPackage["PeterBurbery`LinearAlgebraPaclet`"];
 (*Declare your public symbols here:*)
 
 
-ConsistentMatrixQ;CofactorMatrix;DiagonalizeMatrix;
+ConsistentMatrixQ;CofactorMatrix;
 
 
 Begin["`Private`"];
@@ -31,9 +31,6 @@ ConsistentMatrixQ[mat_?MatrixQ] :=
  
  CofactorMatrix//ClearAll
  CofactorMatrix[mat_?SquareMatrixQ]:=Transpose[Adjugate[mat]]
- 
- DiagonalizeMatrix//ClearAll
- DiagonalizeMatrix[matrix_?DiagonalizableMatrixQ]:=Last[JordanDecomposition[matrix]]
 
 
 (* ::Section:: *)

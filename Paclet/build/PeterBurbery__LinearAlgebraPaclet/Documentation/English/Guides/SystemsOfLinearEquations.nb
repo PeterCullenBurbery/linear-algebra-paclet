@@ -1,0 +1,264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10128,        254]
+NotebookOptionsPosition[      7451,        197]
+NotebookOutlinePosition[      9202,        239]
+CellTagsIndexPosition[      9159,        236]
+WindowTitle->Systems of Linear Equations
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ LINEAR ALGEBRA PACLET GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "d283cf12-aa53-4d04-afee-6b0cb0a02c85"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "e15b4b08-fd7f-4b15-8b52-2ef075cf7b15"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "4e30ff0a-54cd-400d-9c6f-c3a97985ba41"]
+         }],ExpressionUUID->"fd8e0f66-82f0-42c6-9ad3-dc54e24d82cd"],
+         StripOnInput->False], {"\<\"CofactorMatrix\"\>":>
+        Documentation`HelpLookup[
+        "paclet:PeterBurbery/LinearAlgebraPaclet/ref/CofactorMatrix"], \
+"\<\"ConsistentMatrixQ\"\>":>Documentation`HelpLookup[
+        "paclet:PeterBurbery/LinearAlgebraPaclet/ref/ConsistentMatrixQ"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "9ad53fce-6c0f-457e-bca3-89d9779c27b9"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "fa71e003-f69c-4480-b678-6e89292db487"]
+         }],ExpressionUUID->"fc3a5c3c-8da1-46b4-ba40-cf12968d43e9"],
+         StripOnInput->
+          False], {"\<\"PeterBurbery/LinearAlgebraPaclet/guide/\
+SystemsOfLinearEquations\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+              "PeterBurbery/LinearAlgebraPaclet/guide/\
+SystemsOfLinearEquations"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/PeterBurbery/\
+LinearAlgebraPaclet/guide/SystemsOfLinearEquations.html"], StandardForm]], 
+               "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+             False]]; SelectionMove[
+          DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$29505], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "PeterBurbery/LinearAlgebraPaclet/guide/\
+SystemsOfLinearEquations" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "1355dbef-17dc-4645-a1a2-14474a382d06"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "d88b79ea-9027-4359-b455-d6ca5d2338c6"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"fae3f93c-1c14-4b68-86b9-282dc1dcb600"],
+
+Cell[CellGroupData[{
+
+Cell["Systems of Linear Equations", "GuideTitle",
+ CellID->67282294,ExpressionUUID->"e9ea850f-04a2-4ee0-8097-f23447986246"],
+
+Cell["\<\
+Do computations with systems of linear equations with functions in the paclet.\
+\>", "GuideAbstract",
+ CellID->22285976,ExpressionUUID->"9815b775-5df8-427c-bd8e-12664ff5c9b3"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"8da15fa9-b71f-4d32-a845-88e1b7c7d2b7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["ConsistentMatrixQ"]], 
+    "paclet:PeterBurbery/LinearAlgebraPaclet/ref/ConsistentMatrixQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "f7d83900-bdca-4523-8440-82ebf73d98b7"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " determine if a matrix represents a system of linear equations with at \
+least one solution"
+}], "GuideText",
+ CellID->199748914,ExpressionUUID->"79a5aa1a-619d-44e1-ac32-1aedad9f4c33"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["CofactorMatrix"]], 
+    "paclet:PeterBurbery/LinearAlgebraPaclet/ref/CofactorMatrix", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "7c33bf4a-351c-4d1f-8473-cf8e8504c7ff"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " do a computation to find the cofactor matrix"
+}], "GuideText",
+ CellID->73590247,ExpressionUUID->"7fc4925c-3c51-4e22-a237-974b7d03c460"],
+
+Cell["\t", "GuideDelimiter",
+ CellID->765277718,ExpressionUUID->"0699670c-839a-40d5-a3d9-a5dbda382d4d"],
+
+Cell[TextData[Cell["\<\
+
+FrameBox[\"\\\"XXXX\\\"\"]\
+\>", "FunctionPlaceholder", \
+"InlineFunctionSansUnlinked",ExpressionUUID->"00a9cbad-dd3d-4c88-924c-\
+2c33be715db7"]], "InlineGuideFunctionListing",
+ CellID->305802439,ExpressionUUID->"d7204e4d-fbea-41e8-9546-dc822658547d"],
+
+Cell[BoxData["Open"], "Input",ExpressionUUID->"0cbf9fd2-ea17-451e-9954-2ab5f13d073f"]
+}, Open  ]]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Systems of Linear Equations",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2022, 12, 16, 16, 17, 13.2384109}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`LinearAlgebraPaclet`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Linear Algebra Paclet Guide", "language" -> 
+    "en", "paclet" -> "PeterBurbery/LinearAlgebraPaclet", "status" -> "None", 
+    "summary" -> 
+    "Do computations with systems of linear equations with functions in the \
+paclet.", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$29475, "title" -> 
+    "Systems of Linear Equations", "titlemodifier" -> "", "windowtitle" -> 
+    "Systems of Linear Equations", "type" -> "Guide", "uri" -> 
+    "PeterBurbery/LinearAlgebraPaclet/guide/SystemsOfLinearEquations"}},
+CacheGraphics->False,
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (November 18, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"51383674-033e-4391-b4b2-cb0ec1a65db5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[599, 21, 4732, 113, 70, "AnchorBarGrid",ExpressionUUID->"fae3f93c-1c14-4b68-86b9-282dc1dcb600",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5356, 138, 123, 1, 70, "GuideTitle",ExpressionUUID->"e9ea850f-04a2-4ee0-8097-f23447986246",
+ CellID->67282294],
+Cell[5482, 141, 185, 3, 70, "GuideAbstract",ExpressionUUID->"9815b775-5df8-427c-bd8e-12664ff5c9b3",
+ CellID->22285976],
+Cell[5670, 146, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"8da15fa9-b71f-4d32-a845-88e1b7c7d2b7"],
+Cell[5766, 148, 623, 16, 70, "GuideText",ExpressionUUID->"79a5aa1a-619d-44e1-ac32-1aedad9f4c33",
+ CellID->199748914],
+Cell[6392, 166, 570, 15, 70, "GuideText",ExpressionUUID->"7fc4925c-3c51-4e22-a237-974b7d03c460",
+ CellID->73590247],
+Cell[6965, 183, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"0699670c-839a-40d5-a3d9-a5dbda382d4d",
+ CellID->765277718],
+Cell[7071, 186, 276, 6, 70, InheritFromParent,ExpressionUUID->"d7204e4d-fbea-41e8-9546-dc822658547d",
+ CellID->305802439],
+Cell[7350, 194, 85, 0, 70, "Input",ExpressionUUID->"0cbf9fd2-ea17-451e-9954-2ab5f13d073f"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
