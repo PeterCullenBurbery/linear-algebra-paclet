@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "e505aad648fc7423fae3ca8e26f67d7bb9b4172af9641d70df2998effc61d12c"
+            "71f66c3f08d5a339a61d77a9ed4c727a84c4de52c873be1080d4d32435cff574"
                 
         |>
         ,
@@ -24,7 +24,7 @@
             ,
             "Hash"
             ->
-            "263bdd679a240fb731739ce0b5aed478d1211981062064504f3e87d7aec39739"
+            "85f5b6f7d5d02d2f078c6063fb5ef6baba8482f6dcf5fd36fb69b958d81b434f"
                 
         |>
         ,
@@ -39,6 +39,20 @@
             "Hash"
             ->
             "49627662ce4493a1f28ffb480e6464097dd9d692a7ab1ce4a2d2ac5f23fb29f2"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\PyramidMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "3810757c197cda0957e78a8dfac1b0ba1fada35426ea98f658d07d6c27c23e32"
                 
         |>
         ,

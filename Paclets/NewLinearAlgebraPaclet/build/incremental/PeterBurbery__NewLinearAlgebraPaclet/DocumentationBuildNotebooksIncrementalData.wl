@@ -1,7 +1,7 @@
 <|"English\\Guides\\Matrices.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[0.6068598, "Seconds"]|>], 
-   "FileHash" -> "1PjrTAOgV0oHl+nISCn395pwCgvTNeO7uAaii2zfKJg="|>, 
+      "Time" -> Quantity[2.5460688, "Seconds"]|>], 
+   "FileHash" -> "Ny3duTkIEdQogg8UCJmYYXHTu9zyL5N5+4HLcvZVqYc="|>, 
  "English\\ReferencePages\\Symbols\\Antidiagonal.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.0269025, "Seconds"]|>], 
@@ -9,4 +9,8 @@
  "English\\ReferencePages\\Symbols\\UlamMatrix.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.6756167, "Seconds"]|>], 
-   "FileHash" -> "pfs8qJpTnuGat6YV9KMULSu1oTDJoI9KP0Qb+PgqdlU="|>|>
+   "FileHash" -> "pfs8qJpTnuGat6YV9KMULSu1oTDJoI9KP0Qb+PgqdlU="|>, 
+ "English\\ReferencePages\\Symbols\\PyramidMatrix.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[5.1589369, "Seconds"]|>], 
+   "FileHash" -> "i97jf0Z9D1ffZJzoy4zlBpHMLuExBOSvzZJNEvhUuOA="|>|>
