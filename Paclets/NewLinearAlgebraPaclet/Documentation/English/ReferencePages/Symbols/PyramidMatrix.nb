@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[    222468,       4830]
+NotebookDataLength[    222465,       4830]
 NotebookOptionsPosition[    206393,       4488]
-NotebookOutlinePosition[    207199,       4514]
-CellTagsIndexPosition[    207118,       4509]
+NotebookOutlinePosition[    207196,       4514]
+CellTagsIndexPosition[    207115,       4509]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -124,10 +124,10 @@ Cell[TextData[{
     "b34fd0e7-3d14-4852-b4c4-6e15dcc5ea8b"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "8b781a08-78d4-4cb2-9ec3-66e06ed26229", 
-     "f89724a6-dec9-4f97-9998-60338393b9f7"], $CellContext`cellobj$$ = 
+     "95aacbea-1164-4e4f-9b4c-05dc450db6d1"], $CellContext`cellobj$$ = 
     CellObject[
     "1a08b7fb-51d2-4676-863a-8909d8671bf1", 
-     "accd55cd-3b61-4076-b972-272f3defe840"]}, 
+     "f4877160-6361-4d61-b798-386f14cbb3a5"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -4486,8 +4486,8 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{949, 526.5},
-WindowMargins->{{0, Automatic}, {Automatic, 30}},
+WindowSize->{949, 521},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/NewLinearAlgebraPaclet"|>,
 CellContext->"Global`",
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 27, 2023)",
@@ -4508,7 +4508,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 206922, 4502}
+ {"ExtendedExamples", 206919, 4502}
  }
 *)
 (*NotebookFileOutline

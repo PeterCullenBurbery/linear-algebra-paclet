@@ -13,6 +13,8 @@ BeginPackage["PeterBurbery`NewLinearAlgebraPaclet`"];
 
 PeterBurbery`NewLinearAlgebraPaclet`Antidiagonal;
 
+PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizableMatrixQ;
+
 PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizeMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`PyramidMatrix;
@@ -39,6 +41,16 @@ Antidiagonal::usage="Antidiagonal[m] gives the list of elements on the leading a
 
 Antidiagonal[m_?MatrixQ]:=Diagonal[Reverse[m,2]]
 Antidiagonal[m_?MatrixQ,k_Integer]:=Diagonal[Reverse[m,2],k]
+
+DeTriangularizableMatrixQ//ClearAll
+
+DeTriangularizableMatrixQ[nonMatrix_]:=False
+
+DeTriangularizableMatrixQ[matrix_?(LowerTriangularMatrixQ[#, (*the main diagonal*) 0] &)]:=True
+
+DeTriangularizableMatrixQ[matrix_?(UpperTriangularMatrixQ[#,(*the main diagonal*) 0]&)]:=True
+
+DeTriangularizableMatrixQ::usage="DeTriangularizableMatrixQ[matrix] gives True if matrix is a lower triangular matrix or an upper triangular matrix and False otherwise. The function will return True if the matrix is detriangularizable, and False otherwise."
 
 DeTriangularizeMatrix // ClearAll
 

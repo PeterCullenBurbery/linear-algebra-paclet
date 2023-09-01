@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "cb004a3d8711022f0e57f3dc130577c0139a50c0b7611d122a320b09626a272a"
+            "d7a0b494f24e518dc4175f45cb9e94f35f5d7073f6b44872295ca4de07a6779d"
                 
         |>
         ,
@@ -24,7 +24,7 @@
             ,
             "Hash"
             ->
-            "9094e854fd4b0483346b1b7e91cd70785da23cb38e2a25aedbe5168c46a5de5d"
+            "0fbbacca15cb078c102905fb99605f34ebc4e561d46dccff631650b0d515351e"
                 
         |>
         ,
@@ -60,13 +60,27 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\DeTriangularizableMatrixQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "44f42fab5ab875cadfc6e59b55e298a08dcecaf64318689d8a4b02cd9f548c0b"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\DeTriangularizeMatrix.nb"
                     
             ]
             ,
             "Hash"
             ->
-            "593e8b4cd1bd0bdf3cf4350fba2f29959e6920e5b3d0657492d22ef37abffa74"
+            "3b687e56839c752b0e4369005f5998a032694ba97191a4d3d4b6570e8cfe0194"
                 
         |>
         ,
@@ -80,7 +94,7 @@
             ,
             "Hash"
             ->
-            "3810757c197cda0957e78a8dfac1b0ba1fada35426ea98f658d07d6c27c23e32"
+            "3764f9d182e77abd2ab453b305d4d7116c09a9f94fc4bb79efe4546b862aa611"
                 
         |>
         ,
