@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "d7a0b494f24e518dc4175f45cb9e94f35f5d7073f6b44872295ca4de07a6779d"
+            "1ebfaffc0ce44a37102487685adb1cbbd59769738eed248ca62bdca8ab16177c"
                 
         |>
         ,
@@ -24,7 +24,21 @@
             ,
             "Hash"
             ->
-            "0fbbacca15cb078c102905fb99605f34ebc4e561d46dccff631650b0d515351e"
+            "2488a426fee91e1a18542de2949e545737bf81fbc47c0be7c9dfc83015d9fc72"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\AntidiagonalMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "d4381c08d4fd77d58ec2c002882137b333264bd2c1990df6f35d3c4442329c5b"
                 
         |>
         ,
@@ -38,7 +52,7 @@
             ,
             "Hash"
             ->
-            "7061d135bad10b98488b987589dc10ae39ff25854a90caba6936bb6cdc697cde"
+            "73f13fd99e18bef75b472e1a90bbc794341574ab026365bd90f1d78a471f7b81"
                 
         |>
         ,
@@ -52,7 +66,7 @@
             ,
             "Hash"
             ->
-            "8b5cd12173f1d466181e412ff0be07dd5a8a59c2ec6355cd6299ea204a1c0fcd"
+            "707472abcf228ecc09227c1c7faabddf9e9c34a3f9b30685446fe5fb29c44335"
                 
         |>
         ,
@@ -81,6 +95,20 @@
             "Hash"
             ->
             "3b687e56839c752b0e4369005f5998a032694ba97191a4d3d4b6570e8cfe0194"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\MatrixSymmetrizability.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "9cdf281bb20abf95fc2f686fe7d662b4f005ba866f4c219a7e58ba0b084fb703"
                 
         |>
         ,

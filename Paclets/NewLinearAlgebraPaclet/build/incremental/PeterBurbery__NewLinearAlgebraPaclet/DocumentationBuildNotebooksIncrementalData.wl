@@ -1,11 +1,11 @@
 <|"English\\Guides\\Matrices.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.058957, "Seconds"]|>], 
-   "FileHash" -> "m9Ah7vdbXQslNovClk7SaKcrpilou5zAYR0LAccUe2U="|>, 
+      "Time" -> Quantity[0.7141584, "Seconds"]|>], 
+   "FileHash" -> "zTmyeb21pikFRkCkpnmMuTiwSYuM8ldbmLw8YuQOoCY="|>, 
  "English\\ReferencePages\\Symbols\\Antidiagonal.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.4505679, "Seconds"]|>], 
-   "FileHash" -> "z257Jo57vcPoeBENPvi1R7iblM4ayYrUDfMWB+Lr4yk="|>, 
+      "Time" -> Quantity[1.8165416, "Seconds"]|>], 
+   "FileHash" -> "vOzjpZjfDa9Pc07xwRA78vN02QoydRk8aLlpnYweKAU="|>, 
  "English\\ReferencePages\\Symbols\\UlamMatrix.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.6756167, "Seconds"]|>], 
@@ -20,9 +20,17 @@
    "FileHash" -> "tjUKJprQCMU2fzgVoyDR4xQCcz5EqF37GKcVe+BqOQM="|>, 
  "English\\ReferencePages\\Symbols\\DesymmetrizedMatrix.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[3.1273561, "Seconds"]|>], 
-   "FileHash" -> "UtMiyYFhlPlfSKgdv5h6ML2Vnygl5paxO6A2+Uo0FY8="|>, 
+      "Time" -> Quantity[3.5041813, "Seconds"]|>], 
+   "FileHash" -> "n0BBNo+1q7m9c02aYPAIWo3EBiT6OxVnX39dmNjkAwM="|>, 
  "English\\ReferencePages\\Symbols\\DeTriangularizableMatrixQ.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.4812551, "Seconds"]|>], 
-   "FileHash" -> "zTWIQrNbegFNwBpqhIGZk9OLSu3jJMWU0gBCxDJfQl0="|>|>
+   "FileHash" -> "zTWIQrNbegFNwBpqhIGZk9OLSu3jJMWU0gBCxDJfQl0="|>, 
+ "English\\ReferencePages\\Symbols\\MatrixSymmetrizability.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.9066204, "Seconds"]|>], 
+   "FileHash" -> "rd7kVnMZ3V2gGdRWolRZVhz1RByonUydf7Uh+SMoJI0="|>, 
+ "English\\ReferencePages\\Symbols\\AntidiagonalMatrix.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[2.3912228, "Seconds"]|>], 
+   "FileHash" -> "06sZHNpAvRxcGjpOqVDBM07IPNGJXcXS/NW8I7wfueI="|>|>

@@ -13,13 +13,17 @@ BeginPackage["PeterBurbery`NewLinearAlgebraPaclet`"];
 
 PeterBurbery`NewLinearAlgebraPaclet`Antidiagonal;
 
+PeterBurbery`NewLinearAlgebraPaclet`AntidiagonalMatrix;
+
+PeterBurbery`NewLinearAlgebraPaclet`DesymmetrizedMatrix;
+
 PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizableMatrixQ;
 
 PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizeMatrix;
 
-PeterBurbery`NewLinearAlgebraPaclet`PyramidMatrix;
+PeterBurbery`NewLinearAlgebraPaclet`MatrixSymmetrizability;
 
-PeterBurbery`NewLinearAlgebraPaclet`DesymmetrizedMatrix;
+PeterBurbery`NewLinearAlgebraPaclet`PyramidMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`UlamMatrix;
 
@@ -42,6 +46,14 @@ Antidiagonal::usage="Antidiagonal[m] gives the list of elements on the leading a
 Antidiagonal[m_?MatrixQ]:=Diagonal[Reverse[m,2]]
 Antidiagonal[m_?MatrixQ,k_Integer]:=Diagonal[Reverse[m,2],k]
 
+ClearAll[AntidiagonalMatrix]
+AntidiagonalMatrix::usage="AntidiagonalMatrix[list] gives a matrix with the elements of list on the leading antidiagonal, and 0 elsewhere.\nAntidiagonalMatrix[list,k] gives a matrix with the elements of list on the kth antidiagonal.\nAntidiagonalMatrix[list,k,n] pads with 0s to create an n by n matrix.";
+
+AntidiagonalMatrix[list:(_List|_SparseArray)]:=AntidiagonalMatrix[list,0]
+AntidiagonalMatrix[list:(_List|_SparseArray),k_Integer]:=Reverse[DiagonalMatrix[list,k],2]
+AntidiagonalMatrix[list:(_List|_SparseArray),k_Integer,n_Integer]:=AntidiagonalMatrix[list,k,{n,n}]
+AntidiagonalMatrix[list:(_List|_SparseArray),k_Integer,mn:{m_Integer,n_Integer}]:=Reverse[DiagonalMatrix[list,k,mn],2]
+
 DeTriangularizableMatrixQ//ClearAll
 
 DeTriangularizableMatrixQ[nonMatrix_]:=False
@@ -50,7 +62,7 @@ DeTriangularizableMatrixQ[matrix_?(LowerTriangularMatrixQ[#, (*the main diagonal
 
 DeTriangularizableMatrixQ[matrix_?(UpperTriangularMatrixQ[#,(*the main diagonal*) 0]&)]:=True
 
-DeTriangularizableMatrixQ::usage="DeTriangularizableMatrixQ[matrix] gives True if matrix is a lower triangular matrix or an upper triangular matrix and False otherwise. The function will return True if the matrix is detriangularizable, and False otherwise."
+DeTriangularizableMatrixQ::usage="DeTriangularizableMatrixQ[matrix] gives True if matrix is a lower triangular matrix or an upper triangular matrix and False otherwise. The function will return True if the matrix is detriangularizable, and False otherwise.";
 
 DeTriangularizeMatrix // ClearAll
 
@@ -63,6 +75,12 @@ DeTriangularizeMatrix[matrix_?(LowerTriangularMatrixQ[#] &)] :=
 
 DeTriangularizeMatrix[matrix_?(UpperTriangularMatrixQ[#] &)] := 
  UpperTriangularize[matrix, 1] + LowerTriangularize[Transpose[matrix]]
+
+MatrixSymmetrizability//ClearAll
+
+MatrixSymmetrizability[matrix_?SquareMatrixQ]:=Mean[Boole/@MapThread[Equal,{Flatten[MapThread[Take[#1,#2]&,{Rest@Transpose[UpperTriangularize[matrix,1]],Range[First[Dimensions[UpperTriangularize[matrix,1]]]-1]}]],Flatten[MapThread[Take[#1,#2]&,{Rest@LowerTriangularize[matrix,1],Range[First[Dimensions[LowerTriangularize[matrix,1]]]-1]}]]}]]
+
+MatrixSymmetrizability::usage="MatrixSymmetrizability[matrix] returns 1 if matrix is completely symmetric and 0 if matrix has no symmetry other than on the main diagonal. The closer the value is to 1, the more symmetralizable the matrix is.";
 
 PyramidMatrix//ClearAll
 
