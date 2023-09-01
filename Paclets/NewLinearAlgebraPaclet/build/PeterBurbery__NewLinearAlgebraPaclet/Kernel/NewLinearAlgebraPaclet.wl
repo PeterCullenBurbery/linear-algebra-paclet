@@ -13,7 +13,11 @@ BeginPackage["PeterBurbery`NewLinearAlgebraPaclet`"];
 
 PeterBurbery`NewLinearAlgebraPaclet`Antidiagonal;
 
+PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizeMatrix;
+
 PeterBurbery`NewLinearAlgebraPaclet`PyramidMatrix;
+
+PeterBurbery`NewLinearAlgebraPaclet`DesymmetrizedMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`UlamMatrix;
 
@@ -36,6 +40,18 @@ Antidiagonal::usage="Antidiagonal[m] gives the list of elements on the leading a
 Antidiagonal[m_?MatrixQ]:=Diagonal[Reverse[m,2]]
 Antidiagonal[m_?MatrixQ,k_Integer]:=Diagonal[Reverse[m,2],k]
 
+DeTriangularizeMatrix // ClearAll
+
+DeTriangularizeMatrix::usage = 
+  "DeTriangularizeMatrix[matrix] detriangularizes the upper triangular \
+or lower triangular matrix matrix into a symmetric matrix.";
+
+DeTriangularizeMatrix[matrix_?(LowerTriangularMatrixQ[#] &)] := 
+ LowerTriangularize[matrix, -1] + UpperTriangularize[Transpose[matrix]]
+
+DeTriangularizeMatrix[matrix_?(UpperTriangularMatrixQ[#] &)] := 
+ UpperTriangularize[matrix, 1] + LowerTriangularize[Transpose[matrix]]
+
 PyramidMatrix//ClearAll
 
 PyramidMatrix::usage="PyramidMatrix[n] makes a pyramid matrix of size n by n.";
@@ -51,6 +67,14 @@ EvenPyramidMatrix[n_Integer?IntegerQ]/;n>=1:=Join[Join[(NestList[Join[Drop[Delet
 PyramidMatrix[n_?OddQ]:=OddPyramidMatrix[Quotient[n,2]+1]
 
 PyramidMatrix[n_?EvenQ]:=EvenPyramidMatrix[n/2]
+
+DesymmetrizedMatrix // ClearAll
+
+DesymmetrizedMatrix[matrix_?MatrixQ] := 
+ SparseArray[matrix - Symmetrize[matrix]]
+
+DesymmetrizedMatrix::usage = 
+  "DesymmetrizedMatrix[matrix] gives a matrix where the parts of the matrix that stop it from being symmetric are left and the parts that are symmetric become 0, in effect returning a desymmetrized matrix by desymmetrizing the input matrix matrix.";
 
 UlamMatrix//ClearAll
 

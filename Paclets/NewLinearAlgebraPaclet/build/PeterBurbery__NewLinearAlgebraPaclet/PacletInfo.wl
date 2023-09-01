@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Burbery",
     "License" -> "BSD-3-Clause",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.1.0",
+    "Version" -> "1.3.0",
     "WolframVersion" -> "13.3+",
     "PrimaryContext" -> "PeterBurbery`NewLinearAlgebraPaclet`",
     "Extensions" -> {
@@ -17,6 +17,8 @@ PacletObject[
         "Context" -> {"PeterBurbery`NewLinearAlgebraPaclet`"},
         "Symbols" -> {
           "PeterBurbery`NewLinearAlgebraPaclet`Antidiagonal",
+          "PeterBurbery`NewLinearAlgebraPaclet`DesymmetrizedMatrix",
+          "PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizeMatrix",
           "PeterBurbery`NewLinearAlgebraPaclet`PyramidMatrix",
           "PeterBurbery`NewLinearAlgebraPaclet`UlamMatrix"
         }

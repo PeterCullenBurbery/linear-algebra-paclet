@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     50076,       1363]
+NotebookDataLength[     50071,       1363]
 NotebookOptionsPosition[     39361,       1131]
-NotebookOutlinePosition[     40350,       1162]
-CellTagsIndexPosition[     40243,       1156]
+NotebookOutlinePosition[     40345,       1162]
+CellTagsIndexPosition[     40238,       1156]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -432,10 +432,10 @@ Cell[TextData[{
     "fa342209-c073-4259-8c50-3022c758ac1e"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "e9728704-202c-449b-9f66-0c6bdfca6e31", 
-     "77abc4f3-6aa6-4071-989b-55997203366a"], $CellContext`cellobj$$ = 
+     "bd35d396-2d4c-406c-8ed1-7a351a07d6d5"], $CellContext`cellobj$$ = 
     CellObject[
     "30705769-7c57-43b1-91ca-727bcf7b23b7", 
-     "6dc29d17-ce34-4a98-8cc9-58e7302ccc2c"]}, 
+     "e5a865ab-1d9d-4bac-8f30-0b2f1801bf6e"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -1129,8 +1129,8 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{478, 525.5},
-WindowMargins->{{Automatic, -4.5}, {Automatic, 0}},
+WindowSize->{478, 521},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/NewLinearAlgebraPaclet"|>,
 CellContext->"Global`",
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 27, 2023)",
@@ -1155,8 +1155,8 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"TabNext", 39883, 1145},
- {"ExtendedExamples", 40049, 1149}
+ {"TabNext", 39878, 1145},
+ {"ExtendedExamples", 40044, 1149}
  }
 *)
 (*NotebookFileOutline
@@ -1189,7 +1189,7 @@ Cell[13524, 375, 96, 1, 27, "Notes",ExpressionUUID->"76939e32-f748-4a7c-a11c-9bd
 Cell[CellGroupData[{
 Cell[13657, 381, 458, 13, 39, "SeeAlsoSection",ExpressionUUID->"b20efd32-42f4-4f74-b536-4b55ad83b3d2",
  CellID->429138359],
-Cell[14118, 396, 2808, 68, 24, "SeeAlso",ExpressionUUID->"5934d17b-c992-4bbb-bffa-dc9e176226a0",
+Cell[14118, 396, 2808, 68, 25, "SeeAlso",ExpressionUUID->"5934d17b-c992-4bbb-bffa-dc9e176226a0",
  CellID->513880962]
 }, Open  ]],
 Cell[CellGroupData[{
