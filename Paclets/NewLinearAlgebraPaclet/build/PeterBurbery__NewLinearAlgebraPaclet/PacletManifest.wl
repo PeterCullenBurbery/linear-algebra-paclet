@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "16768990a96bdb0e6a589191d36073902fb0672bc7abd39762528b6846f19ba0"
+            "c6997f8be2b59f5539442e7b2c17b27ddad770d78fa68350528a4e4ac9e3c671"
                 
         |>
         ,
@@ -24,7 +24,7 @@
             ,
             "Hash"
             ->
-            "cdf56cbb389505b1d4b05f9e90a1838c611f795d93cff525795c665849e77108"
+            "7f095885bda9350a033f2fdc791d28798a180ef4b95294608d260b7a44dd2ba4"
                 
         |>
         ,
@@ -94,7 +94,7 @@
             ,
             "Hash"
             ->
-            "1a3d0b7c9238d0a5b836f97bc4f284525e49e67609495188f35b66812716f5d0"
+            "b24642426eff9bc9e89757547506d15385c6a8a33f2d97ed9a28858be928a46f"
                 
         |>
         ,
@@ -108,7 +108,7 @@
             ,
             "Hash"
             ->
-            "707472abcf228ecc09227c1c7faabddf9e9c34a3f9b30685446fe5fb29c44335"
+            "cd20025ff5ca3f478a29b74322db76568e036bc2f7cf935ffc1f17242da8e63d"
                 
         |>
         ,
@@ -137,6 +137,34 @@
             "Hash"
             ->
             "3b687e56839c752b0e4369005f5998a032694ba97191a4d3d4b6570e8cfe0194"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\HessianMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "a2387c721066108e88d15fc56c418940c725665a5dcf8ebd9a75df878e81eb38"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\JacobianMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "8b1c1c9ed7d16e8b431c9651f7bb3ad18107f499f8ebf00fecc5bc3166d79921"
                 
         |>
         ,

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     25391,        729]
+NotebookDataLength[     25389,        729]
 NotebookOptionsPosition[     18348,        575]
-NotebookOutlinePosition[     19149,        601]
-CellTagsIndexPosition[     19070,        596]
+NotebookOutlinePosition[     19147,        601]
+CellTagsIndexPosition[     19068,        596]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -80,10 +80,10 @@ AntidiagonallySymmetrizableMatrixQ"]], "InlineSeeAlsoFunction",
     "268fe903-c05d-4385-8b68-8046fd2612fd"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "765ae8aa-941e-4bda-92b2-57010d30e93e", 
-     "84bbac54-52a4-4b2d-8cce-5403e1933340"], $CellContext`cellobj$$ = 
+     "ac590ea2-817e-4f17-b731-8492efdb878d"], $CellContext`cellobj$$ = 
     CellObject[
     "6869ac50-b3bc-46b1-8cdf-5a7f3ba97382", 
-     "126f17a9-2673-4818-a3b5-5b3006579c30"]}, 
+     "55fa5439-3e11-44e7-b853-34a29470ed9d"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -573,7 +573,7 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{949, 526.5},
+WindowSize->{949, 521},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/NewLinearAlgebraPaclet"|>,
 CellContext->"Global`",
@@ -595,7 +595,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 18876, 589}
+ {"ExtendedExamples", 18874, 589}
  }
 *)
 (*NotebookFileOutline

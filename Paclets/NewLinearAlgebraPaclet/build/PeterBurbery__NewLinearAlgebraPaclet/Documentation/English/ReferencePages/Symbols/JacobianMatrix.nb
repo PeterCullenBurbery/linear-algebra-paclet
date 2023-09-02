@@ -1,0 +1,1130 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     40686,       1120]
+NotebookOptionsPosition[     33382,        963]
+NotebookOutlinePosition[     35717,       1020]
+CellTagsIndexPosition[     35631,       1015]
+WindowTitle->JacobianMatrix
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ NEW LINEAR ALGEBRA PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "a00cfeab-6966-4c6e-ac0b-6995d6ab91a0"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "89ba0812-3ab9-41ff-a164-5a84a25acd4c"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "76afe2bb-e0e9-42a5-8650-fdd5dfadf017"]
+         }],ExpressionUUID->"41e005ea-d44c-47e8-9f44-80c9fb19bead"],
+         StripOnInput->False],{
+        "\"HessianMatrix\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/HessianMatrix"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "b1549ef7-67df-4951-81ff-2dd2987a4bb4"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "245a22eb-b124-4da9-866c-e914081827a2"]
+         }],ExpressionUUID->"ee76e6ef-7682-412a-9824-065d04f9895b"],
+         StripOnInput->False],{
+        "\"Matrices\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/guide/Matrices"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "4fb903d2-d685-490b-9fb5-a7558c97b9ee"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "6362a2d1-79cf-4a14-8b92-04d83e24c494"]
+         }],ExpressionUUID->"f7e5eb7a-0af0-487f-8c25-04e21275a17f"],
+         StripOnInput->False],{
+        "\"PeterBurbery/NewLinearAlgebraPaclet/ref/JacobianMatrix\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/NewLinearAlgebraPaclet/ref/JacobianMatrix"]}\
+, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+NewLinearAlgebraPaclet/ref/JacobianMatrix.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$646736], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/NewLinearAlgebraPaclet/ref/JacobianMatrix" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "d147bf12-844e-43f7-aafa-fe6ba04c99cb"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "0aba4c77-db5e-4df1-974f-d2946a0139dd"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"ac792b9b-402d-4229-ba85-0e72be703528"],
+
+Cell["PeterBurbery`NewLinearAlgebraPaclet`", "ContextNameCell",ExpressionUUID->"7c44bfb5-a5bf-4cb3-827a-b8ac28c4161c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "JacobianMatrix", "ObjectName",ExpressionUUID->
+      "4de013af-ffda-41e9-b3d1-008d3512c395"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"4aad5e0d-8a4f-4953-9ee2-d5ecce0dde02"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "bcd09c27-edc9-46d9-a977-f6c2fe2fc5bc"]
+    }],ExpressionUUID->"338ec974-0a9b-41d2-91fa-a587fdd3f8fc"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"97f094f1-65aa-4aeb-8754-\
+3c65cbc8614e"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["JacobianMatrix"]], 
+         "paclet:PeterBurberyNewLinearAlgebraPaclet/ref/JacobianMatrix", 
+         "PeterBurberyNewLinearAlgebraPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["vector", "TI"], ",", 
+        StyleBox["ls", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "83f62fc2-cd12-4ce5-90af-dbaacdd1853a"],
+     "\[LineSeparator]computes the Jacobian matrix for the vector-valued \
+function represented by the ",
+     Cell[BoxData[
+      StyleBox["vector", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "a2cd656d-6565-4b66-afd8-d6e3bb3f4782"],
+     " vector with the indeterminates in the list ",
+     Cell[BoxData[
+      StyleBox["ls", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "c8708f6b-2b9a-4c3e-a60c-33a6d0fa72a7"],
+     "."
+    }],ExpressionUUID->"bec3bee3-2215-4b16-9632-02013c6044a3"]}
+  }]], "Usage",
+ CellID->13717409,ExpressionUUID->"348d6c27-b8b4-4ac2-bac2-744b13b00002"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"17cdb3b7-92eb-4190-a410-10f57469b67c"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"eb73f4d5-53e8-4398-a2ef-40a7e1e7670e"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"27cada22-684c-4040-8303-62607a0fb23f"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"3c5f3c20-4575-4ef8-93b1-ff2d276105e3"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->131342332,ExpressionUUID->"dd097117-f48b-439a-826d-fd0149af0c0a"],
+
+Cell["\<\
+The Jacobian matrix is a matrix that contains all the first-order partial \
+derivatives of a vector-valued function of several variables. It is named \
+after Carl Gustav Jacob Jacobi, a German mathematician who introduced it in \
+the early 19th century.
+
+The Jacobian matrix can be used to represent the transformation of a surface \
+or volume under a change of variables. It can also be used to find the volume \
+element of a transformed region. In machine learning, the Jacobian matrix is \
+used in backpropagation, a technique for training neural networks.\
+\>", "Notes",
+ CellID->88974154,ExpressionUUID->"0761fe78-22bc-4293-864d-a180d08c812e"],
+
+Cell["\<\
+In machine learning, the Jacobian matrix is used in backpropagation, a \
+technique for training neural networks. Backpropagation is an iterative \
+algorithm that uses the chain rule to calculate the gradient of a loss \
+function with respect to the parameters of a neural network. The Jacobian \
+matrix is used to calculate the partial derivatives of the loss function with \
+respect to the parameters, which are then used by backpropagation to update \
+the parameters.
+
+The Jacobian matrix is a powerful tool that can be used in many different \
+applications. It is a fundamental concept in vector calculus and differential \
+geometry, and it is also used in machine learning, computer graphics, and \
+other fields.\
+\>", "Notes",
+ CellID->3490574,ExpressionUUID->"e369698e-7bb1-41d1-8542-49ba834b7781"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"c636bc4f-1f3a-4f66-9f08-67ce1a0917cd"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"d89d6f7d-5eff-48aa-849d-34415245348e"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "65017aee-4a22-45f6-9e0c-5ecd1751969b"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->19638120,ExpressionUUID->"5ba06ec3-73ee-4967-88c0-f1f8e2234070"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`NewLinearAlgebraPaclet`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->135926718,ExpressionUUID->"2a0b51d3-af81-4e3a-839b-ee9e8e1289e3"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"f97b0951-e545-4370-9a50-5be8edce0d8f"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"1a7b318f-5431-4066-be44-c922382ba2ce"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "a1fcedfb-8925-44eb-bc92-32d4e7fbd926"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->44593072,ExpressionUUID->"d0824ad8-b5d6-467b-b032-17a401f26941"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"JacobianMatrix", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "2"], "y"}], ",", 
+      RowBox[{
+       RowBox[{"5", "x"}], "+", 
+       RowBox[{"Sin", "[", "y", "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->10964424,ExpressionUUID->"01286d40-992b-466c-9bb8-b0584a30b9ed"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"2", " ", "x", " ", "y"}], 
+      SuperscriptBox["x", "2"]},
+     {"5", 
+      RowBox[{"cos", "(", "y", ")"}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellLabel->"Out[1]//TraditionalForm=",
+ CellID->631722003,ExpressionUUID->"f3855b08-3b94-47cb-9930-3dda51d7a817"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"Det", "[", 
+   RowBox[{"JacobianMatrix", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["x", "2"], "y"}], ",", 
+       RowBox[{
+        RowBox[{"5", "x"}], "+", 
+        RowBox[{"Sin", "[", "y", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[2]:=",
+ CellID->2288033,ExpressionUUID->"372bc7be-c8c0-4427-a701-6fe3ade4d7fb"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"2", " ", "x", " ", "y", " ", 
+    RowBox[{"cos", "(", "y", ")"}]}], "-", 
+   RowBox[{"5", " ", 
+    SuperscriptBox["x", "2"]}]}], TraditionalForm]], "Output",
+ CellLabel->"Out[2]//TraditionalForm=",
+ CellID->242755161,ExpressionUUID->"05677bbd-23b1-43bc-ab7f-5fe479286133"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"FullSimplify", "[", 
+   RowBox[{"Det", "[", 
+    RowBox[{"JacobianMatrix", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["x", "2"], "y"}], ",", 
+        RowBox[{
+         RowBox[{"5", "x"}], "+", 
+         RowBox[{"Sin", "[", "y", "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[3]:=",
+ CellID->255306215,ExpressionUUID->"97caa1cd-2d0a-4574-91e1-f317b538b7fa"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"x", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", " ", "y", " ", 
+      RowBox[{"cos", "(", "y", ")"}]}], "-", 
+     RowBox[{"5", " ", "x"}]}], ")"}]}], TraditionalForm]], "Output",
+ CellLabel->"Out[3]//TraditionalForm=",
+ CellID->298746232,ExpressionUUID->"4212e6f2-fd75-402a-9629-859f31938572"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"JacobianMatrix", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"r", " ", 
+       RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}]}], ",", 
+      RowBox[{"r", " ", 
+       RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "\[CurlyPhi]"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[4]:=",
+ CellID->606148778,ExpressionUUID->"1202a7f0-dd78-4546-a2c0-38665378ad18"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"cos", "(", "\[CurlyPhi]", ")"}], 
+      RowBox[{
+       RowBox[{"-", "r"}], " ", 
+       RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}]},
+     {
+      RowBox[{"sin", "(", "\[CurlyPhi]", ")"}], 
+      RowBox[{"r", " ", 
+       RowBox[{"cos", "(", "\[CurlyPhi]", ")"}]}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellLabel->"Out[4]//TraditionalForm=",
+ CellID->29688218,ExpressionUUID->"44197691-3da3-427f-ab00-02fdbba4890d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"Det", "[", 
+   RowBox[{"JacobianMatrix", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"r", " ", 
+        RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}]}], ",", 
+       RowBox[{"r", " ", 
+        RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "\[CurlyPhi]"}], "}"}]}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[5]:=",
+ CellID->33032229,ExpressionUUID->"d6bc7947-3937-4069-bb33-9b877abcfacf"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"r", " ", 
+    RowBox[{
+     SuperscriptBox["sin", "2"], "(", "\[CurlyPhi]", ")"}]}], "+", 
+   RowBox[{"r", " ", 
+    RowBox[{
+     SuperscriptBox["cos", "2"], "(", "\[CurlyPhi]", ")"}]}]}], 
+  TraditionalForm]], "Output",
+ CellLabel->"Out[5]//TraditionalForm=",
+ CellID->437215141,ExpressionUUID->"9cac5687-f227-4ad0-987c-6e90b3e130aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"FullSimplify", "[", 
+   RowBox[{"Det", "[", 
+    RowBox[{"JacobianMatrix", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"r", " ", 
+         RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}]}], ",", 
+        RowBox[{"r", " ", 
+         RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "\[CurlyPhi]"}], "}"}]}], "]"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[6]:=",
+ CellID->82748600,ExpressionUUID->"07b1c75c-f4e8-4869-868e-75b12f1b7845"],
+
+Cell[BoxData[
+ FormBox["r", TraditionalForm]], "Output",
+ CellLabel->"Out[6]//TraditionalForm=",
+ CellID->602475131,ExpressionUUID->"4a81ade0-a272-413d-a25f-9b21e4a766ca"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"JacobianMatrix", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Rho]", " ", 
+       RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], " ", 
+       RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+      RowBox[{"\[Rho]", " ", 
+       RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], " ", 
+       RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+      RowBox[{"\[Rho]", " ", 
+       RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Rho]", ",", "\[CurlyPhi]", ",", "\[Theta]"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[7]:=",
+ CellID->650115271,ExpressionUUID->"63845ba0-b2d8-4b46-8457-6d6cbee9345a"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+       RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}], 
+      RowBox[{"\[Rho]", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+       RowBox[{"cos", "(", "\[CurlyPhi]", ")"}]}], 
+      RowBox[{
+       RowBox[{"-", "\[Rho]"}], " ", 
+       RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+       RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}]},
+     {
+      RowBox[{
+       RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+       RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}], 
+      RowBox[{"\[Rho]", " ", 
+       RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+       RowBox[{"cos", "(", "\[CurlyPhi]", ")"}]}], 
+      RowBox[{"\[Rho]", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+       RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}]},
+     {
+      RowBox[{"cos", "(", "\[CurlyPhi]", ")"}], 
+      RowBox[{
+       RowBox[{"-", "\[Rho]"}], " ", 
+       RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}], "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellLabel->"Out[7]//TraditionalForm=",
+ CellID->408194802,ExpressionUUID->"9ea92b5f-4259-4fab-9723-fa6707c0fdf8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"Det", "[", 
+   RowBox[{"JacobianMatrix", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\[Rho]", " ", 
+        RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], " ", 
+        RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+       RowBox[{"\[Rho]", " ", 
+        RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], " ", 
+        RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+       RowBox[{"\[Rho]", " ", 
+        RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Rho]", ",", "\[CurlyPhi]", ",", "\[Theta]"}], "}"}]}], "]"}],
+    "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[8]:=",
+ CellID->485904626,ExpressionUUID->"93c4f386-d405-4919-bfd1-2bf3edfc2f3a"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["\[Rho]", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["sin", "3"], "(", "\[CurlyPhi]", ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["\[Rho]", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["cos", "2"], "(", "\[Theta]", ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["sin", "3"], "(", "\[CurlyPhi]", ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["\[Rho]", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}], " ", 
+    RowBox[{"sin", "(", "\[CurlyPhi]", ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["cos", "2"], "(", "\[CurlyPhi]", ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["\[Rho]", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["cos", "2"], "(", "\[Theta]", ")"}], " ", 
+    RowBox[{"sin", "(", "\[CurlyPhi]", ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["cos", "2"], "(", "\[CurlyPhi]", ")"}]}]}], 
+  TraditionalForm]], "Output",
+ CellLabel->"Out[8]//TraditionalForm=",
+ CellID->355710271,ExpressionUUID->"5c157361-6b5f-4973-a9e7-e72b78ab536b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"FullSimplify", "[", 
+   RowBox[{"Det", "[", 
+    RowBox[{"JacobianMatrix", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[Rho]", " ", 
+         RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], " ", 
+         RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+        RowBox[{"\[Rho]", " ", 
+         RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+        RowBox[{"\[Rho]", " ", 
+         RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Rho]", ",", "\[CurlyPhi]", ",", "\[Theta]"}], "}"}]}], 
+     "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[9]:=",
+ CellID->193858538,ExpressionUUID->"e646eaaf-4be0-470c-a6ba-cc3c3bee4bc8"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["\[Rho]", "2"], " ", 
+   RowBox[{"sin", "(", "\[CurlyPhi]", ")"}]}], TraditionalForm]], "Output",
+ CellLabel->"Out[9]//TraditionalForm=",
+ CellID->340988566,ExpressionUUID->"bcf9d93b-9702-44eb-9220-adc2903630a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"JacobianMatrix", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["x", "1"], ",", 
+      RowBox[{"5", 
+       SubscriptBox["x", "3"]}], ",", 
+      RowBox[{
+       RowBox[{"4", 
+        SubsuperscriptBox["x", "2", "2"]}], "-", 
+       RowBox[{"2", 
+        SubscriptBox["x", "3"]}]}], ",", 
+      RowBox[{
+       SubscriptBox["x", "3"], 
+       RowBox[{"Sin", "[", 
+        SubscriptBox["x", "1"], "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["x", "1"], ",", 
+      SubscriptBox["x", "2"], ",", 
+      SubscriptBox["x", "3"]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[10]:=",
+ CellID->248215768,ExpressionUUID->"6318bd95-f0b9-4985-8a67-cbd62ea99b89"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0"},
+     {"0", "0", "5"},
+     {"0", 
+      RowBox[{"8", " ", 
+       SubscriptBox["x", "2"]}], 
+      RowBox[{"-", "2"}]},
+     {
+      RowBox[{
+       SubscriptBox["x", "3"], " ", 
+       RowBox[{"cos", "(", 
+        SubscriptBox["x", "1"], ")"}]}], "0", 
+      RowBox[{"sin", "(", 
+       SubscriptBox["x", "1"], ")"}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellLabel->"Out[10]//TraditionalForm=",
+ CellID->727952053,ExpressionUUID->"28c7720c-f062-47db-9457-3e938fa18015"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"JacobianMatrix", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"5", 
+       SubscriptBox["x", "2"]}], ",", 
+      RowBox[{
+       RowBox[{"4", 
+        SubsuperscriptBox["x", "1", "2"]}], "-", 
+       RowBox[{"2", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          SubscriptBox["x", "2"], 
+          SubscriptBox["x", "3"]}], "]"}]}]}], ",", 
+      RowBox[{
+       SubscriptBox["x", "2"], 
+       SubscriptBox["x", "3"]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["x", "1"], ",", 
+      SubscriptBox["x", "2"], ",", 
+      SubscriptBox["x", "3"]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[11]:=",
+ CellID->397263045,ExpressionUUID->"d036f806-122e-46a3-b3e1-8e1cce4e6f55"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "5", "0"},
+     {
+      RowBox[{"8", " ", 
+       SubscriptBox["x", "1"]}], 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       SubscriptBox["x", "3"], " ", 
+       RowBox[{"cos", "(", 
+        RowBox[{
+         SubscriptBox["x", "2"], " ", 
+         SubscriptBox["x", "3"]}], ")"}]}], 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       SubscriptBox["x", "2"], " ", 
+       RowBox[{"cos", "(", 
+        RowBox[{
+         SubscriptBox["x", "2"], " ", 
+         SubscriptBox["x", "3"]}], ")"}]}]},
+     {"0", 
+      SubscriptBox["x", "3"], 
+      SubscriptBox["x", "2"]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellLabel->"Out[11]//TraditionalForm=",
+ CellID->3555122,ExpressionUUID->"810d6ea2-4542-4339-a4ae-ffb0d40fbe72"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"Det", "[", 
+   RowBox[{"JacobianMatrix", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"5", 
+        SubscriptBox["x", "2"]}], ",", 
+       RowBox[{
+        RowBox[{"4", 
+         SubsuperscriptBox["x", "1", "2"]}], "-", 
+        RowBox[{"2", 
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           SubscriptBox["x", "2"], 
+           SubscriptBox["x", "3"]}], "]"}]}]}], ",", 
+       RowBox[{
+        SubscriptBox["x", "2"], 
+        SubscriptBox["x", "3"]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox["x", "1"], ",", 
+       SubscriptBox["x", "2"], ",", 
+       SubscriptBox["x", "3"]}], "}"}]}], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[12]:=",
+ CellID->56125911,ExpressionUUID->"b0ed5548-474f-4e6e-b708-23fff23a1ba8"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"-", "40"}], " ", 
+   SubscriptBox["x", "1"], " ", 
+   SubscriptBox["x", "2"]}], TraditionalForm]], "Output",
+ CellLabel->"Out[12]//TraditionalForm=",
+ CellID->204076153,ExpressionUUID->"fa730756-c6a9-45fb-9e4d-a3ab337a5533"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TemplateBox[{
+          Cell[
+           TextData["HessianMatrix"]], 
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/HessianMatrix", 
+          "PeterBurbery Package Symbol"},
+         "PackageLink",
+         BaseStyle->"InlineFormula"]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "d390f836-2e5b-4ff8-8f1b-98cd15f6a7b4"]], "SeeAlso",ExpressionUUID->
+        "9559a3b2-3777-45ca-9225-9cf6ea5dfbdb"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"809ea1f8-87b8-4a5d-9697-\
+c2ca7df0c976"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Matrices"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/guide/Matrices"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "da43fdb3-2b2d-4660-b2b3-b419a8630032"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"d56b9801-fee0-4253-816d-\
+3a9db88924c9"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"e7f39190-443d-444d-96f4-ea10dc28fd6e"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 557},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"JacobianMatrix",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}, 
+    "NotesSection" -> Closed}, "NewStyles" -> True, 
+  "CitationPopupData" -> $Failed, "ShowCitation" -> False, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2023, 9, 2, 14, 20, 2.2603865}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`NewLinearAlgebraPaclet`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ New Linear Algebra Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/NewLinearAlgebraPaclet", "status" -> 
+    "None", "summary" -> 
+    "JacobianMatrix[vector, ls] computes the Jacobian matrix for the \
+vector-valued function represented by the vector vector with the \
+indeterminates in the list ls.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "JacobianMatrix", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "JacobianMatrix", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/NewLinearAlgebraPaclet/ref/JacobianMatrix"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 27, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (July 27, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"4901839f-7953-4e70-8cc9-445f7cccaa72"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[11523, 294, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"5ba06ec3-73ee-4967-88c0-f1f8e2234070",
+   CellTags->"PrimaryExamplesSection",
+   CellID->19638120]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 35432, 1008}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[589, 21, 5439, 133, 57, "AnchorBarGrid",ExpressionUUID->"ac792b9b-402d-4229-ba85-0e72be703528",
+ CellID->1],
+Cell[6031, 156, 118, 0, 23, "ContextNameCell",ExpressionUUID->"7c44bfb5-a5bf-4cb3-827a-b8ac28c4161c"],
+Cell[CellGroupData[{
+Cell[6174, 160, 557, 14, 56, "ObjectNameGrid",ExpressionUUID->"97f094f1-65aa-4aeb-8754-3c65cbc8614e"],
+Cell[6734, 176, 1228, 30, 111, "Usage",ExpressionUUID->"348d6c27-b8b4-4ac2-bac2-744b13b00002",
+ CellID->13717409]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7999, 211, 1919, 48, 37, "NotesSection",ExpressionUUID->"dd097117-f48b-439a-826d-fd0149af0c0a",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->131342332],
+Cell[9921, 261, 658, 11, 70, "Notes",ExpressionUUID->"0761fe78-22bc-4293-864d-a180d08c812e",
+ CellID->88974154],
+Cell[10582, 274, 814, 14, 70, "Notes",ExpressionUUID->"e369698e-7bb1-41d1-8542-49ba834b7781",
+ CellID->3490574]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[11523, 294, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"5ba06ec3-73ee-4967-88c0-f1f8e2234070",
+ CellTags->"PrimaryExamplesSection",
+ CellID->19638120],
+Cell[12945, 333, 227, 4, 26, "Input",ExpressionUUID->"2a0b51d3-af81-4e3a-839b-ee9e8e1289e3",
+ CellID->135926718],
+Cell[CellGroupData[{
+Cell[13197, 341, 1397, 36, 30, "ExampleSection",ExpressionUUID->"d0824ad8-b5d6-467b-b032-17a401f26941",
+ CellID->44593072],
+Cell[CellGroupData[{
+Cell[14619, 381, 528, 15, 30, "Input",ExpressionUUID->"01286d40-992b-466c-9bb8-b0584a30b9ed",
+ CellID->10964424],
+Cell[15150, 398, 662, 18, 63, "Output",ExpressionUUID->"f3855b08-3b94-47cb-9930-3dda51d7a817",
+ CellID->631722003]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15849, 421, 568, 16, 30, "Input",ExpressionUUID->"372bc7be-c8c0-4427-a701-6fe3ade4d7fb",
+ CellID->2288033],
+Cell[16420, 439, 320, 8, 47, "Output",ExpressionUUID->"05677bbd-23b1-43bc-ab7f-5fe479286133",
+ CellID->242755161]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16777, 452, 621, 17, 30, "Input",ExpressionUUID->"97caa1cd-2d0a-4574-91e1-f317b538b7fa",
+ CellID->255306215],
+Cell[17401, 471, 339, 9, 46, "Output",ExpressionUUID->"4212e6f2-fd75-402a-9629-859f31938572",
+ CellID->298746232]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17777, 485, 547, 14, 70, "Input",ExpressionUUID->"1202a7f0-dd78-4546-a2c0-38665378ad18",
+ CellID->606148778],
+Cell[18327, 501, 817, 22, 61, "Output",ExpressionUUID->"44197691-3da3-427f-ab00-02fdbba4890d",
+ CellID->29688218]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19181, 528, 589, 16, 70, "Input",ExpressionUUID->"d6bc7947-3937-4069-bb33-9b877abcfacf",
+ CellID->33032229],
+Cell[19773, 546, 383, 11, 47, "Output",ExpressionUUID->"9cac5687-f227-4ad0-987c-6e90b3e130aa",
+ CellID->437215141]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20193, 562, 639, 17, 70, "Input",ExpressionUUID->"07b1c75c-f4e8-4869-868e-75b12f1b7845",
+ CellID->82748600],
+Cell[20835, 581, 171, 3, 46, "Output",ExpressionUUID->"4a81ade0-a272-413d-a25f-9b21e4a766ca",
+ CellID->602475131]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21043, 589, 773, 19, 70, "Input",ExpressionUUID->"63845ba0-b2d8-4b46-8457-6d6cbee9345a",
+ CellID->650115271],
+Cell[21819, 610, 1506, 39, 77, "Output",ExpressionUUID->"9ea92b5f-4259-4fab-9723-fa6707c0fdf8",
+ CellID->408194802]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23362, 654, 818, 20, 70, "Input",ExpressionUUID->"93c4f386-d405-4919-bfd1-2bf3edfc2f3a",
+ CellID->485904626],
+Cell[24183, 676, 1121, 31, 47, "Output",ExpressionUUID->"5c157361-6b5f-4973-a9e7-e72b78ab536b",
+ CellID->355710271]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25341, 712, 874, 21, 70, "Input",ExpressionUUID->"e646eaaf-4be0-470c-a6ba-cc3c3bee4bc8",
+ CellID->193858538],
+Cell[26218, 735, 265, 6, 47, "Output",ExpressionUUID->"bcf9d93b-9702-44eb-9220-adc2903630a3",
+ CellID->340988566]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26520, 746, 828, 25, 70, "Input",ExpressionUUID->"6318bd95-f0b9-4985-8a67-cbd62ea99b89",
+ CellID->248215768],
+Cell[27351, 773, 872, 26, 93, "Output",ExpressionUUID->"28c7720c-f062-47db-9457-3e938fa18015",
+ CellID->727952053]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28260, 804, 849, 26, 70, "Input",ExpressionUUID->"d036f806-122e-46a3-b3e1-8e1cce4e6f55",
+ CellID->397263045],
+Cell[29112, 832, 1118, 34, 77, "Output",ExpressionUUID->"810d6ea2-4542-4339-a4ae-ffb0d40fbe72",
+ CellID->3555122]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30267, 871, 900, 27, 70, "Input",ExpressionUUID->"b0ed5548-474f-4e6e-b708-23fff23a1ba8",
+ CellID->56125911],
+Cell[31170, 900, 271, 7, 46, "Output",ExpressionUUID->"fa730756-c6a9-45fb-9e4d-a3ab337a5533",
+ CellID->204076153]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[31683, 916, 872, 22, 70, "SeeAlsoSection",ExpressionUUID->"809ea1f8-87b8-4a5d-9697-c2ca7df0c976"],
+Cell[32558, 940, 739, 19, 70, "MoreAboutSection",ExpressionUUID->"d56b9801-fee0-4253-816d-3a9db88924c9"],
+Cell[33300, 961, 78, 0, 70, "FooterCell",ExpressionUUID->"e7f39190-443d-444d-96f4-ea10dc28fd6e"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,7 +1,7 @@
 <|"English\\Guides\\Matrices.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.0568761, "Seconds"]|>], 
-   "FileHash" -> "gu89eEE5X3ARXrglodzHUh0yyyNVwjGiunY+ILbV13A="|>, 
+      "Time" -> Quantity[1.0115215, "Seconds"]|>], 
+   "FileHash" -> "tjRZROBq8WBX4w1imjrr9wQCL9Tc1OTpBrYiq43NEWw="|>, 
  "English\\ReferencePages\\Symbols\\Antidiagonal.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.8165416, "Seconds"]|>], 
@@ -20,8 +20,8 @@
    "FileHash" -> "tjUKJprQCMU2fzgVoyDR4xQCcz5EqF37GKcVe+BqOQM="|>, 
  "English\\ReferencePages\\Symbols\\DesymmetrizedMatrix.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[3.5041813, "Seconds"]|>], 
-   "FileHash" -> "n0BBNo+1q7m9c02aYPAIWo3EBiT6OxVnX39dmNjkAwM="|>, 
+      "Time" -> Quantity[3.4669908, "Seconds"]|>], 
+   "FileHash" -> "wfc6bX02jrjue1PylEsCgCKXmXqkLOynaQkvK0zkj8k="|>, 
  "English\\ReferencePages\\Symbols\\DeTriangularizableMatrixQ.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.9537816, "Seconds"]|>], 
@@ -72,8 +72,8 @@
    "FileHash" -> "FrjMvRpijtisCw8/7zf29NbGPh2kFMZbjI1bIs6D8bk="|>, 
  "English\\ReferencePages\\Symbols\\AntidiagonalTranspose.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.2143096, "Seconds"]|>], 
-   "FileHash" -> "2uXwoNCYOnLcQeHxsde9oY+KWynTCPmMp5Ff/6SZL6k="|>, 
+      "Time" -> Quantity[1.3676498, "Seconds"]|>], 
+   "FileHash" -> "Zqjo0r02SxX3Iq5OpfdfuEKPC0pY0YkASU0Qr60OVGI="|>, 
  "English\\ReferencePages\\Symbols\\LowerRightTriangularMatrixQ.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[1.7166591, "Seconds"]|>], 
@@ -81,4 +81,12 @@
  "English\\ReferencePages\\Symbols\\UpperLeftTriangularMatrixQ.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
       "Time" -> Quantity[2.1254572, "Seconds"]|>], 
-   "FileHash" -> "LeyEGD2T68TpQT+UC38gT4Inr1dMPj+gRPvGpD8VIjs="|>|>
+   "FileHash" -> "LeyEGD2T68TpQT+UC38gT4Inr1dMPj+gRPvGpD8VIjs="|>, 
+ "English\\ReferencePages\\Symbols\\HessianMatrix.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[2.0185439, "Seconds"]|>], 
+   "FileHash" -> "XL7B6+zPZAsyRhy89Cj9ZUPmLWpqWZ3prow4X7fJ/rg="|>, 
+ "English\\ReferencePages\\Symbols\\JacobianMatrix.nb" -> 
+  <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
+      "Time" -> Quantity[1.5394259, "Seconds"]|>], 
+   "FileHash" -> "JXMfD4++njfvJTnNcGrKwFt0aSCOHnhUW5gZl5+MMZw="|>|>

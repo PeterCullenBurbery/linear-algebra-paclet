@@ -1,0 +1,1135 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     40559,       1127]
+NotebookOptionsPosition[     31081,        927]
+NotebookOutlinePosition[     31882,        953]
+CellTagsIndexPosition[     31803,        948]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["HessianMatrix", "ObjectName",
+ CellID->653999568,ExpressionUUID->"1d185294-f4d2-472a-a5de-30ceb504707a"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"8957f238-8e57-44c1-8f92-49254de45750"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["HessianMatrix",
+    BaseStyle->"Link",
+    ButtonData->
+     "paclet:PeterBurberyNewLinearAlgebraPaclet/ref/HessianMatrix"], "[", 
+   RowBox[{
+    StyleBox["function", "TI"], ",", 
+    StyleBox["ls", "TI"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "5f50b3c4-2b1e-433e-9334-33d373767b04"],
+ "\[LineSeparator]computes the Hessian matrix of second derivatives of ",
+ Cell[BoxData[
+  StyleBox["function", "TI"]], "InlineFormula",ExpressionUUID->
+  "1786768a-f9d6-439e-9946-a88d13f3933c"],
+ " with respect to the list of indeterminates/variables ",
+ Cell[BoxData[
+  StyleBox["ls", "TI"]], "InlineFormula",ExpressionUUID->
+  "0954c56e-919c-4945-b1da-4e525d4a2353"],
+ "."
+}], "Usage",
+ CellChangeTimes->{{3.902664682242007*^9, 3.9026646823946238`*^9}},
+ CellID->437787176,ExpressionUUID->"5e15b21a-7430-40ac-bb19-ece2df94cf4e"],
+
+Cell["\<\
+
+The Hessian matrix is a square matrix that contains all the second-order \
+partial derivatives of a scalar-valued function, or scalar field. It \
+describes the local curvature of a function of many variables.
+
+The Hessian matrix is named after Ludwig Otto Hesse, a German mathematician \
+who developed it in the 19th century. The Hessian matrix is often denoted by H.
+
+The shape of the Hessian matrix depends on the number of variables in the \
+function. If the function has n variables, then the Hessian matrix will be an \
+n \[Times] n matrix.\
+\>", "Notes",
+ CellChangeTimes->{{3.9026647135492663`*^9, 3.9026647164594913`*^9}},
+ CellID->516792457,ExpressionUUID->"6632794f-28a3-47dc-befa-a360795d506f"],
+
+Cell["\<\
+The elements of the Hessian matrix are the second-order partial derivatives \
+of the function. For example, if the function is f(x, y), then the Hessian \
+matrix will have the following elements:\
+\>", "Notes",
+ CellChangeTimes->{{3.9026647323092184`*^9, 3.9026647326967106`*^9}},
+ CellID->395181436,ExpressionUUID->"2a1db598-b692-46f8-9963-3c87d77565ad"],
+
+Cell[TextData[Cell[BoxData[
+ RowBox[{"H", "=", 
+  RowBox[{"(", GridBox[{
+     {
+      SubscriptBox["f", "xx"], 
+      SubscriptBox["f", "xy"]},
+     {
+      SubscriptBox["f", "yx"], 
+      SubscriptBox["f", "yy"]}
+    }], ")"}]}]], "InlineFormula",
+ FormatType->
+  StandardForm,ExpressionUUID->"55ae5746-4218-46fe-a55d-15e648ae42da"]], \
+"Notes",
+ CellChangeTimes->{{3.9026647423590302`*^9, 3.90266477461561*^9}},
+ CellID->4489517,ExpressionUUID->"ccdd77a1-28c1-41c8-b4ec-2e44af5d7c63"],
+
+Cell[TextData[{
+ "where ",
+ Cell[BoxData[
+  SubscriptBox["f", "xx"]], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "cb4b659a-5740-49f8-86fa-614eeb3d120b"],
+ " is the second partial derivative of f with respect to x, ",
+ Cell[BoxData[
+  SubscriptBox["f", "xy"]], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "e58d65cc-5ba5-4595-909c-9187c5813ec3"],
+ " is the mixed partial derivative of f with respect to x and y, and so on."
+}], "ExampleText",
+ CellChangeTimes->{{3.9026647823461018`*^9, 3.902664810183655*^9}},
+ CellID->620501774,ExpressionUUID->"4157dbd9-6195-4d3e-a1f7-cec5194935c6"],
+
+Cell["\<\
+The Hessian matrix can be used to analyze the local behavior of a function. \
+For example, the eigenvalues of the Hessian matrix can be used to determine \
+whether a critical point of the function is a minimum, maximum, or saddle \
+point.
+
+The Hessian matrix is also used in many optimization algorithms. For example, \
+the Newton's method for finding the minimum of a function uses the Hessian \
+matrix to approximate the gradient of the function.\
+\>", "Notes",
+ CellID->267424225,ExpressionUUID->"1129b0c8-ba6a-476f-82ab-5b10a791c0bd"],
+
+Cell["\<\
+The Hessian matrix is a powerful tool that can be used to analyze the local \
+behavior of functions and to solve optimization problems. It is a fundamental \
+concept in multivariable calculus and differential geometry, and it is also \
+used in many other fields, such as machine learning, computer graphics, and \
+economics.\
+\>", "Notes",
+ CellID->310352310,ExpressionUUID->"a2936ff1-646d-45b4-9797-f2f8b52b0543"],
+
+Cell["\<\
+If the second partial derivatives are all continuous, the Hessian matrix is a \
+symmetric matrix by the symmetry of second derivatives.\
+\>", "Notes",
+ CellChangeTimes->{{3.9026649379452972`*^9, 3.902664939884057*^9}},
+ CellID->259579250,ExpressionUUID->"bfc56e63-7e06-4ce9-86ef-985a05709ad1"],
+
+Cell["\<\
+The determinant of the Hessian matrix is called the Hessian determinant.\
+\>", "Notes",
+ CellID->229511980,ExpressionUUID->"5af8a609-7e8a-41ec-a26b-c6a642147d86"],
+
+Cell[TextData[{
+ "The Hessian matrix of a function ",
+ Cell[BoxData["f"], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "3c470c86-f566-4a2f-9933-404e1b1acbca"],
+ " is the transpose of the Jacobian matrix of the gradient of the function ",
+ Cell[BoxData["f"], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "2405ded3-762c-45ca-980b-fbe825e95074"],
+ ", that is ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    StyleBox["H",
+     FontWeight->"Bold"], 
+    RowBox[{"(", 
+     RowBox[{"f", 
+      RowBox[{"(", 
+       StyleBox["x",
+        FontWeight->"Bold"], ")"}]}], ")"}]}], "=", 
+   RowBox[{
+    StyleBox["J",
+     FontWeight->"Bold"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Del]", "f"}], 
+       RowBox[{"(", 
+        StyleBox["x",
+         FontWeight->"Bold"], ")"}]}], ")"}], "\[Transpose]"]}]}]], 
+  "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "741d5929-75ca-4aff-925c-f5c41d0d0ef1"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.902664959844492*^9, 3.902665022237288*^9}},
+ CellID->482686725,ExpressionUUID->"1b2a5a51-82f7-4130-9ecd-e3d153b23623"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "f380cee3-f0b0-4c4a-b9ef-0b074412bd40"]
+}], "SeeAlsoSection",
+ CellChangeTimes->{{3.902665020623907*^9, 3.902665021191597*^9}},
+ CellID->958206268,ExpressionUUID->"6634cc1d-213c-4716-abbe-95bced403b26"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["SymmetricMatrixQ",
+   BaseStyle->"Link"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "f2329cbe-4a43-41f7-b7f1-1945b4ab1ccc"],
+ StyleBox[" \[FilledVerySmallSquare] ", "InlineSeparator"],
+ Cell[BoxData[
+  ButtonBox["D",
+   BaseStyle->"Link"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},
+  CellTags->"4a80e54e-3d61-4d47-a89c-0b8ae24e82ec",ExpressionUUID->
+  "32806cf5-a592-46df-ba2e-5f2b5ebba9d0"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "d7ae0833-4880-4acc-865b-2dd2d8f7b346"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "55cadd73-b468-4c65-8868-b5b8b12827ab", 
+     "3ec6e7a1-ebcd-4398-9a5b-d62a2142af76"], $CellContext`cellobj$$ = 
+    CellObject[
+    "71eb9664-edb2-4afc-99d8-0f5ed06fd1d1", 
+     "22e7f960-43c7-4d96-bd49-2cbd25d4063a"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "71eb9664-edb2-4afc-99d8-0f5ed06fd1d1"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.902664692420052*^9, 3.9026647000846105`*^9}, {
+  3.9026656310099964`*^9, 3.9026656357759757`*^9}},
+ CellID->23167036,ExpressionUUID->"c18ebba8-fd33-493c-a0f4-a413544e4262"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "76e7eede-d7f6-42ec-9529-334fa5b98db7"]
+}], "TechNotesSection",
+ CellID->287772320,ExpressionUUID->"440eeca5-6777-4f37-a10e-7347273e2276"],
+
+Cell["XXXX", "Tutorials",
+ CellID->21330382,ExpressionUUID->"fe9c743b-e4ca-4cf4-880d-b196e097f912"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->322320083,ExpressionUUID->"fc0fabc2-ccaf-4bb7-879b-8b235e72b73f"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->48749616,ExpressionUUID->"d80c9fb8-f9c9-4e65-a347-226142d2f249"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "dc9e7883-5635-48b8-a753-6170f60a7ed9"]
+}], "RelatedLinksSection",
+ CellID->24091468,ExpressionUUID->"d534c15b-4aae-4bbc-86c6-3bf399da53fa"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->272453060,ExpressionUUID->"13de6581-b3cb-437f-bd03-8bb3ec9bc8c4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "76dac4dd-85b1-4755-98c0-e7048cb80368"]
+}], "ExamplesInitializationSection",
+ CellID->29635738,ExpressionUUID->"8d327665-6f01-4e27-9732-e7761ff1d1b6"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`NewLinearAlgebraPaclet`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->440542757,ExpressionUUID->"e64e5368-94f7-44f6-b6d9-61ae9206f578"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->374489926,ExpressionUUID->"dace39c0-4a4e-4120-948e-bf6cd310ffa7"],
+
+Cell[TextData[{
+ "Consider the function ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", " ", "y"}], ")"}]}], " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["x", "2"], " ", "+", " ", 
+    SuperscriptBox["y", "2"]}]}]], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "4be3c1dc-6086-4abb-89f8-a778fa4b90d7"],
+ ". Find the Hessian matrix of this function:"
+}], "ExampleText",
+ CellChangeTimes->{{3.9026650856003723`*^9, 3.902665089729113*^9}, {
+  3.902665159930732*^9, 3.9026651665242777`*^9}},
+ CellID->96802612,ExpressionUUID->"6a34a2ac-46d0-4689-9b77-786d4cdf195e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HessianMatrix", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", 
+    SuperscriptBox["y", "2"]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.902665092224674*^9, 3.9026651010743165`*^9}},
+ CellLabel->"In[936]:=",
+ CellID->915255302,ExpressionUUID->"9b1a93a5-85f4-4963-a5e8-c22226803c26"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "2"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9026651014814277`*^9},
+ CellLabel->"Out[936]=",
+ CellID->597117966,ExpressionUUID->"215240a0-3862-4a9a-af76-5509e6c079dc"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Consider the function ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", " ", "y"}], ")"}]}], " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["x", "3"], " ", "+", " ", 
+    SuperscriptBox["y", "3"]}]}]], "InlineFormula",
+  InitializationCell->True,
+  FormatType->StandardForm,ExpressionUUID->
+  "83763f44-8959-47d0-a40c-e1806193f81d"],
+ ". Find the Hessian matrix of this function:"
+}], "ExampleText",
+ CellChangeTimes->{{3.9026651412847843`*^9, 3.902665156366934*^9}, {
+  3.9026653345504293`*^9, 3.902665334904188*^9}},
+ CellID->159419883,ExpressionUUID->"2fc5e298-c2ff-48e1-b74c-bcfcd1a397a2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HessianMatrix", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "3"], "+", 
+    SuperscriptBox["y", "3"]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.902665092224674*^9, 3.9026651095068936`*^9}},
+ CellLabel->"In[937]:=",
+ CellID->85252448,ExpressionUUID->"5bf71e2d-ce7d-46b6-a00e-56b7f910317b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"6", " ", "x"}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"6", " ", "y"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9026651098339167`*^9},
+ CellLabel->"Out[937]=",
+ CellID->31942833,ExpressionUUID->"7e510b6a-f340-4030-9a68-9907de518151"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Consider the function ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", " ", "y"}], ")"}]}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "y"}], " ", "+", " ", 
+    RowBox[{"x", " ", 
+     SuperscriptBox["y", "2"]}]}]}]], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "9c10abf1-841e-4a45-aa6a-8279e9de3639"],
+ ". Find the Hessian matrix of this function:"
+}], "ExampleText",
+ CellChangeTimes->{{3.902665172073701*^9, 3.9026651989246016`*^9}, {
+  3.9026653375986624`*^9, 3.9026653380420947`*^9}},
+ CellID->148823778,ExpressionUUID->"2fa3f8bc-d2ff-44c5-b826-66cfd157a815"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "@", 
+  RowBox[{"HessianMatrix", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "2"], "y"}], "+", " ", 
+     RowBox[{"x", " ", 
+      SuperscriptBox["y", "2"]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.902665092224674*^9, 3.9026651251284723`*^9}, {
+  3.9026651839400206`*^9, 3.902665185464718*^9}},
+ CellLabel->"In[941]:=",
+ CellID->758522193,ExpressionUUID->"d4977f8c-a9ad-4771-a4e2-3ff779b9c0cc"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"2", " ", "y"}], 
+      RowBox[{
+       RowBox[{"2", " ", "x"}], "+", 
+       RowBox[{"2", " ", "y"}]}]},
+     {
+      RowBox[{
+       RowBox[{"2", " ", "x"}], "+", 
+       RowBox[{"2", " ", "y"}]}], 
+      RowBox[{"2", " ", "x"}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.902665119997471*^9, 3.9026651253851624`*^9}, {
+  3.902665186063184*^9, 3.9026652011127276`*^9}},
+ CellLabel->"Out[941]//TraditionalForm=",
+ CellID->736029186,ExpressionUUID->"8ce55293-1d9b-4093-bdce-4e95159b600b"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Consider the function ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", " ", "y"}], ")"}]}], " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", "x"], " ", "sin", " ", "y"}]}]], 
+  "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "202bbc50-8842-4815-aa0d-0ddb6f7c9783"],
+ ". Find the Hessian matrix of this function:"
+}], "ExampleText",
+ CellChangeTimes->{{3.9026652073122845`*^9, 3.9026652198486795`*^9}, {
+  3.902665340655673*^9, 3.9026653409885817`*^9}},
+ CellID->466832039,ExpressionUUID->"85079273-726a-44a2-a246-de99ca77c999"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "@", 
+  RowBox[{"HessianMatrix", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Exp", "[", "x", "]"}], 
+     RowBox[{"Sin", "[", "y", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.902665092224674*^9, 3.902665134570121*^9}, {
+  3.902665226832161*^9, 3.9026652297901363`*^9}},
+ CellLabel->"In[942]:=",
+ CellID->36306421,ExpressionUUID->"76cb42b8-fb77-4254-8459-5ce8166fe2b4"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "x"], " ", 
+       RowBox[{"sin", "(", "y", ")"}]}], 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "x"], " ", 
+       RowBox[{"cos", "(", "y", ")"}]}]},
+     {
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "x"], " ", 
+       RowBox[{"cos", "(", "y", ")"}]}], 
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["\[ExponentialE]", "x"]}], " ", 
+       RowBox[{"sin", "(", "y", ")"}]}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.902665230202496*^9},
+ CellLabel->"Out[942]//TraditionalForm=",
+ CellID->436347501,ExpressionUUID->"76066af4-a4bd-490c-a55a-75c05f56373a"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Consider the function ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", " ", "y", ",", " ", "z"}], ")"}]}], " ", "=", 
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", " ", 
+    SuperscriptBox["y", "2"], " ", "+", " ", 
+    SuperscriptBox["z", "2"], " ", "-", " ", 
+    RowBox[{"2", "x", " ", "y"}], " ", "-", " ", 
+    RowBox[{"2", "x", " ", "z"}], " ", "-", " ", 
+    RowBox[{"2", "y", " ", "z"}]}]}]], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "7ce3020f-4690-4694-9e74-b2d672248f1c"],
+ ". Find the Hessian matrix of this function:"
+}], "ExampleText",
+ CellChangeTimes->{{3.9026652884572525`*^9, 3.9026653438135047`*^9}},
+ CellID->19643844,ExpressionUUID->"fd24b2a3-a25c-42ac-becd-10ddeced3334"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "@", 
+  RowBox[{"HessianMatrix", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", " ", 
+     SuperscriptBox["y", "2"], " ", "+", " ", 
+     SuperscriptBox["z", "2"], " ", "-", " ", 
+     RowBox[{"2", "x", " ", "y"}], " ", "-", " ", 
+     RowBox[{"2", "x", " ", "z"}], " ", "-", " ", 
+     RowBox[{"2", "y", " ", "z"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.902665350417776*^9, 3.9026653604452105`*^9}},
+ CellLabel->"In[943]:=",
+ CellID->96029262,ExpressionUUID->"929c4daf-11bd-4583-a3e9-f4028d7bfdb6"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"2", 
+      RowBox[{"-", "2"}], 
+      RowBox[{"-", "2"}]},
+     {
+      RowBox[{"-", "2"}], "2", 
+      RowBox[{"-", "2"}]},
+     {
+      RowBox[{"-", "2"}], 
+      RowBox[{"-", "2"}], "2"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.902665360791269*^9},
+ CellLabel->"Out[943]//TraditionalForm=",
+ CellID->68201128,ExpressionUUID->"a6879705-e54c-4931-996c-7d4be119ddd3"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Consider the function ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", 
+     RowBox[{"x", ",", " ", "y"}], ")"}]}], " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["x", 
+     RowBox[{"2", " ", "y"}]], " ", "+", " ", 
+    RowBox[{"x", " ", 
+     SuperscriptBox["y", "2"]}]}]}]], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "7db79a0b-87d4-4f3f-9d67-7b2976f2ea4f"],
+ ". Find the Hessian matrix of this function:"
+}], "ExampleText",
+ CellChangeTimes->{{3.902665172073701*^9, 3.9026651989246016`*^9}, {
+  3.9026653375986624`*^9, 3.9026653380420947`*^9}, {3.9026653842665577`*^9, 
+  3.9026653864864492`*^9}},
+ CellID->56021821,ExpressionUUID->"241a1b26-12c7-41a4-bea7-5cbd7e9600c0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "@", 
+  RowBox[{"HessianMatrix", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", 
+      RowBox[{"2", "y"}]], "+", " ", 
+     RowBox[{"x", " ", 
+      SuperscriptBox["y", "2"]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.902665092224674*^9, 3.9026651251284723`*^9}, {
+  3.9026651839400206`*^9, 3.902665185464718*^9}, {3.902665392885947*^9, 
+  3.902665394520686*^9}},
+ CellLabel->"In[944]:=",
+ CellID->353920288,ExpressionUUID->"d81322c2-ddea-4978-ae12-440cff275c8a"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"2", " ", "y", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "y"}], "-", "1"}], ")"}], " ", 
+       SuperscriptBox["x", 
+        RowBox[{
+         RowBox[{"2", " ", "y"}], "-", "2"}]]}], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["x", 
+         RowBox[{
+          RowBox[{"2", " ", "y"}], "-", "1"}]]}], "+", 
+       RowBox[{"4", " ", "y", " ", 
+        SuperscriptBox["x", 
+         RowBox[{
+          RowBox[{"2", " ", "y"}], "-", "1"}]], " ", 
+        RowBox[{"log", "(", "x", ")"}]}], "+", 
+       RowBox[{"2", " ", "y"}]}]},
+     {
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["x", 
+         RowBox[{
+          RowBox[{"2", " ", "y"}], "-", "1"}]]}], "+", 
+       RowBox[{"4", " ", "y", " ", 
+        SuperscriptBox["x", 
+         RowBox[{
+          RowBox[{"2", " ", "y"}], "-", "1"}]], " ", 
+        RowBox[{"log", "(", "x", ")"}]}], "+", 
+       RowBox[{"2", " ", "y"}]}], 
+      RowBox[{
+       RowBox[{"4", " ", 
+        SuperscriptBox["x", 
+         RowBox[{"2", " ", "y"}]], " ", 
+        RowBox[{
+         SuperscriptBox["log", "2"], "(", "x", ")"}]}], "+", 
+       RowBox[{"2", " ", "x"}]}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.902665119997471*^9, 3.9026651253851624`*^9}, {
+   3.902665186063184*^9, 3.9026652011127276`*^9}, 3.9026653952566657`*^9},
+ CellLabel->"Out[944]//TraditionalForm=",
+ CellID->152046889,ExpressionUUID->"854980bf-1d83-4398-9a00-50ed7c96654b"]
+}, Open  ]],
+
+Cell["This is a symmetric matrix:", "ExampleText",
+ CellChangeTimes->{{3.902665441475229*^9, 3.9026654464377356`*^9}},
+ CellID->216790954,ExpressionUUID->"038a6772-15d3-416b-aadc-c50661973548"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SymmetricMatrixQ", "[", 
+  RowBox[{"HessianMatrix", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", 
+      RowBox[{"2", "y"}]], "+", " ", 
+     RowBox[{"x", " ", 
+      SuperscriptBox["y", "2"]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9026654472752266`*^9, 3.902665458218602*^9}},
+ CellLabel->"In[945]:=",
+ CellID->161014998,ExpressionUUID->"138e9cf9-e28c-441d-abb4-75e61ca10c7c"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.9026654585090714`*^9},
+ CellLabel->"Out[945]=",
+ CellID->425157419,ExpressionUUID->"17a4c2ca-343c-41ca-8146-e234fc849efd"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "b84ab8cf-31a6-49c7-9239-bbed3bc9c8f0"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->196270545,ExpressionUUID->"546827cc-f5aa-4444-8ba7-e11a4fe1fd16"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "856266ab-e145-4325-b21f-7732299a6bfd"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->157304815,ExpressionUUID->"0f1eb35c-d5e9-4baf-88e6-1287c9ce937e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "44854bcd-1e2d-472d-8f58-c8e17daa56a6"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->83895483,ExpressionUUID->"ac072f0a-8cc4-47d3-9cae-e07110708a0b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "4a3b7f36-a0c1-451c-882b-bcf37ca7bf98"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->26679541,ExpressionUUID->"47e1edd6-ea36-4b4a-bb20-10a0576457dc"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "084ac060-4596-498e-9533-9a3ca98152ca"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->502612576,ExpressionUUID->"3830e02d-83af-4481-bb8c-3d37b0b4c63c"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "eb38ac09-6716-44d6-a980-e9918a810fcc"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->54274820,ExpressionUUID->"4d7b2a4f-b135-44ea-aa94-5a1ed270135e"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "587c8f02-4697-4bf0-b695-f0eb8e15aca4"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->187924646,ExpressionUUID->"77131180-c70c-49df-ae48-ad20084f6bf8"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "d7f2a8aa-6c05-4b0f-b385-d6a24e3afa9d"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->94871696,ExpressionUUID->"19ae15dd-94f0-4a0f-bb72-484562de8bd5"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "9e1a71be-51c3-49b2-a6f5-9970b8a481bc"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->10896853,ExpressionUUID->"4eedfd54-a200-4050-a335-e29799777ee5"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "6af982dd-8e67-421a-bf77-266468e16891"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->5153939,ExpressionUUID->"0c167080-869a-4c65-b607-8ecda290a7a9"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "2343ef94-4b72-41a9-9cee-6390361d5b23"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->990750058,ExpressionUUID->"333fd5d1-0a23-4765-a631-183125d66e18"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->776621245,ExpressionUUID->"b8aecdce-5b40-4d58-ac12-c2e588fdb826"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"c3b2a24e-39f2-4840-adf0-67fd2dbb77b8"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"c02f383f-e45a-4b54-8a77-4db6806e5f3a"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"2cd3e7ff-0bb4-482b-b6a0-4e3e124fdbc8"]
+}], "History",
+ CellID->555252461,ExpressionUUID->"c0b96a9b-09f6-4e8a-acda-1391038560ba"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "d801163c-50ef-421e-8576-b6872260f49b"]
+}], "CategorizationSection",
+ CellID->13762792,ExpressionUUID->"5da5efe7-a206-4aca-9785-d9ce97cd2c62"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->295898774,ExpressionUUID->"3bb0d5ca-8eb3-4006-bd18-dd9d02fd38fd"],
+
+Cell["PeterBurbery/NewLinearAlgebraPaclet", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->79872519,ExpressionUUID->"862721f0-6d96-459d-91b3-5162c88f7e8a"],
+
+Cell["PeterBurbery`NewLinearAlgebraPaclet`", "Categorization",
+ CellLabel->"Context",
+ CellID->55491736,ExpressionUUID->"e94c5db1-c8de-479d-b9aa-fbc7e832df51"],
+
+Cell["PeterBurbery/NewLinearAlgebraPaclet/ref/HessianMatrix", "Categorization",
+ CellLabel->"URI",
+ CellID->731698610,ExpressionUUID->"4e241004-ef20-48a7-81f7-4eb310ce945a"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->791210093,ExpressionUUID->"6b1d3291-04b5-4d43-ac08-33d60f72cfe2"],
+
+Cell["XXXX", "Keywords",
+ CellID->593047490,ExpressionUUID->"bba99328-1fbf-44db-be57-1b0ebe1a74df"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->335417256,ExpressionUUID->"117630f0-c2d8-4939-83f3-a835d4f2da49"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->363763669,ExpressionUUID->"73955899-967f-4d12-8f7b-67eafbbba21a"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->312915218,ExpressionUUID->"e89baed7-1804-405d-b58a-cf8a86984633"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->627388267,ExpressionUUID->"6196e81f-3d63-4728-96d4-d013873bac68"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->160394450,ExpressionUUID->"45475f8e-977d-42d8-bebe-4e233ef1f6c9"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{949, 526.5},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "PeterBurbery/NewLinearAlgebraPaclet"|>,
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 27, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"55cadd73-b468-4c65-8868-b5b8b12827ab"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[25262, 754, 487, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"546827cc-f5aa-4444-8ba7-e11a4fe1fd16",
+   CellTags->"ExtendedExamples",
+   CellID->196270545]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 31609, 941}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 110, 1, 74, "ObjectName",ExpressionUUID->"1d185294-f4d2-472a-a5de-30ceb504707a",
+ CellID->653999568],
+Cell[696, 25, 960, 23, 96, "Usage",ExpressionUUID->"5e15b21a-7430-40ac-bb19-ece2df94cf4e",
+ CellID->437787176],
+Cell[1659, 50, 716, 14, 171, "Notes",ExpressionUUID->"6632794f-28a3-47dc-befa-a360795d506f",
+ CellID->516792457],
+Cell[2378, 66, 365, 6, 45, "Notes",ExpressionUUID->"2a1db598-b692-46f8-9963-3c87d77565ad",
+ CellID->395181436],
+Cell[2746, 74, 486, 14, 41, "Notes",ExpressionUUID->"ccdd77a1-28c1-41c8-b4ec-2e44af5d7c63",
+ CellID->4489517],
+Cell[3235, 90, 622, 14, 42, "ExampleText",ExpressionUUID->"4157dbd9-6195-4d3e-a1f7-cec5194935c6",
+ CellID->620501774],
+Cell[3860, 106, 548, 10, 117, "Notes",ExpressionUUID->"1129b0c8-ba6a-476f-82ab-5b10a791c0bd",
+ CellID->267424225],
+Cell[4411, 118, 424, 7, 63, "Notes",ExpressionUUID->"a2936ff1-646d-45b4-9797-f2f8b52b0543",
+ CellID->310352310],
+Cell[4838, 127, 303, 5, 45, "Notes",ExpressionUUID->"bfc56e63-7e06-4ce9-86ef-985a05709ad1",
+ CellID->259579250],
+Cell[5144, 134, 172, 3, 27, "Notes",ExpressionUUID->"5af8a609-7e8a-41ec-a26b-c6a642147d86",
+ CellID->229511980],
+Cell[5319, 139, 1129, 36, 45, "Notes",ExpressionUUID->"1b2a5a51-82f7-4130-9ecd-e3d153b23623",
+ CellID->482686725]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6485, 180, 524, 14, 39, "SeeAlsoSection",ExpressionUUID->"6634cc1d-213c-4716-abbe-95bced403b26",
+ CellID->958206268],
+Cell[7012, 196, 2058, 50, 25, "SeeAlso",ExpressionUUID->"c18ebba8-fd33-493c-a0f4-a413544e4262",
+ CellID->23167036]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9107, 251, 435, 12, 40, "TechNotesSection",ExpressionUUID->"440eeca5-6777-4f37-a10e-7347273e2276",
+ CellID->287772320],
+Cell[9545, 265, 99, 1, 19, "Tutorials",ExpressionUUID->"fe9c743b-e4ca-4cf4-880d-b196e097f912",
+ CellID->21330382]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9681, 271, 117, 1, 39, "MoreAboutSection",ExpressionUUID->"fc0fabc2-ccaf-4bb7-879b-8b235e72b73f",
+ CellID->322320083],
+Cell[9801, 274, 99, 1, 19, "MoreAbout",ExpressionUUID->"d80c9fb8-f9c9-4e65-a347-226142d2f249",
+ CellID->48749616]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9937, 280, 471, 13, 39, "RelatedLinksSection",ExpressionUUID->"d534c15b-4aae-4bbc-86c6-3bf399da53fa",
+ CellID->24091468],
+Cell[10411, 295, 103, 1, 19, "RelatedLinks",ExpressionUUID->"13de6581-b3cb-437f-bd03-8bb3ec9bc8c4",
+ CellID->272453060]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10551, 301, 529, 14, 69, "ExamplesInitializationSection",ExpressionUUID->"8d327665-6f01-4e27-9732-e7761ff1d1b6",
+ CellID->29635738],
+Cell[11083, 317, 195, 3, 45, "ExampleInitialization",ExpressionUUID->"e64e5368-94f7-44f6-b6d9-61ae9206f578",
+ CellID->440542757]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11315, 325, 442, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"dace39c0-4a4e-4120-948e-bf6cd310ffa7",
+ CellID->374489926],
+Cell[11760, 339, 619, 16, 24, "ExampleText",ExpressionUUID->"6a34a2ac-46d0-4689-9b77-786d4cdf195e",
+ CellID->96802612],
+Cell[CellGroupData[{
+Cell[12404, 359, 382, 10, 29, "Input",ExpressionUUID->"9b1a93a5-85f4-4963-a5e8-c22226803c26",
+ CellID->915255302],
+Cell[12789, 371, 315, 9, 24, "Output",ExpressionUUID->"215240a0-3862-4a9a-af76-5509e6c079dc",
+ CellID->597117966]
+}, Open  ]],
+Cell[13119, 383, 648, 17, 24, "ExampleText",ExpressionUUID->"2fc5e298-c2ff-48e1-b74c-bcfcd1a397a2",
+ CellID->159419883],
+Cell[CellGroupData[{
+Cell[13792, 404, 381, 10, 29, "Input",ExpressionUUID->"5bf71e2d-ce7d-46b6-a00e-56b7f910317b",
+ CellID->85252448],
+Cell[14176, 416, 366, 11, 24, "Output",ExpressionUUID->"7e510b6a-f340-4030-9a68-9907de518151",
+ CellID->31942833]
+}, Open  ]],
+Cell[14557, 430, 669, 18, 24, "ExampleText",ExpressionUUID->"2fa3f8bc-d2ff-44c5-b826-66cfd157a815",
+ CellID->148823778],
+Cell[CellGroupData[{
+Cell[15251, 452, 530, 14, 29, "Input",ExpressionUUID->"d4977f8c-a9ad-4771-a4e2-3ff779b9c0cc",
+ CellID->758522193],
+Cell[15784, 468, 904, 25, 38, "Output",ExpressionUUID->"8ce55293-1d9b-4093-bdce-4e95159b600b",
+ CellID->736029186]
+}, Open  ]],
+Cell[16703, 496, 615, 16, 24, "ExampleText",ExpressionUUID->"85079273-726a-44a2-a246-de99ca77c999",
+ CellID->466832039],
+Cell[CellGroupData[{
+Cell[17343, 516, 480, 12, 25, "Input",ExpressionUUID->"76cb42b8-fb77-4254-8459-5ce8166fe2b4",
+ CellID->36306421],
+Cell[17826, 530, 1051, 29, 38, "Output",ExpressionUUID->"76066af4-a4bd-490c-a55a-75c05f56373a",
+ CellID->436347501]
+}, Open  ]],
+Cell[18892, 562, 771, 19, 41, "ExampleText",ExpressionUUID->"fd24b2a3-a25c-42ac-becd-10ddeced3334",
+ CellID->19643844],
+Cell[CellGroupData[{
+Cell[19688, 585, 639, 15, 29, "Input",ExpressionUUID->"929c4daf-11bd-4583-a3e9-f4028d7bfdb6",
+ CellID->96029262],
+Cell[20330, 602, 770, 23, 54, "Output",ExpressionUUID->"a6879705-e54c-4931-996c-7d4be119ddd3",
+ CellID->68201128]
+}, Open  ]],
+Cell[21115, 628, 726, 19, 24, "ExampleText",ExpressionUUID->"241a1b26-12c7-41a4-bea7-5cbd7e9600c0",
+ CellID->56021821],
+Cell[CellGroupData[{
+Cell[21866, 651, 579, 15, 29, "Input",ExpressionUUID->"d81322c2-ddea-4978-ae12-440cff275c8a",
+ CellID->353920288],
+Cell[22448, 668, 1869, 53, 42, "Output",ExpressionUUID->"854980bf-1d83-4398-9a00-50ed7c96654b",
+ CellID->152046889]
+}, Open  ]],
+Cell[24332, 724, 193, 2, 24, "ExampleText",ExpressionUUID->"038a6772-15d3-416b-aadc-c50661973548",
+ CellID->216790954],
+Cell[CellGroupData[{
+Cell[24550, 730, 485, 13, 29, "Input",ExpressionUUID->"138e9cf9-e28c-441d-abb4-75e61ca10c7c",
+ CellID->161014998],
+Cell[25038, 745, 175, 3, 24, "Output",ExpressionUUID->"17a4c2ca-343c-41ca-8146-e234fc849efd",
+ CellID->425157419]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25262, 754, 487, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"546827cc-f5aa-4444-8ba7-e11a4fe1fd16",
+ CellTags->"ExtendedExamples",
+ CellID->196270545],
+Cell[25752, 769, 241, 5, 35, "ExampleSection",ExpressionUUID->"0f1eb35c-d5e9-4baf-88e6-1287c9ce937e",
+ CellID->157304815],
+Cell[25996, 776, 263, 5, 23, "ExampleSection",ExpressionUUID->"ac072f0a-8cc4-47d3-9cae-e07110708a0b",
+ CellID->83895483],
+Cell[CellGroupData[{
+Cell[26284, 785, 242, 5, 23, "ExampleSection",ExpressionUUID->"47e1edd6-ea36-4b4a-bb20-10a0576457dc",
+ CellID->26679541],
+Cell[26529, 792, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"3830e02d-83af-4481-bb8c-3d37b0b4c63c",
+ CellID->502612576],
+Cell[26778, 799, 245, 5, 22, "ExampleSubsection",ExpressionUUID->"4d7b2a4f-b135-44ea-aa94-5a1ed270135e",
+ CellID->54274820]
+}, Open  ]],
+Cell[27038, 807, 248, 5, 35, "ExampleSection",ExpressionUUID->"77131180-c70c-49df-ae48-ad20084f6bf8",
+ CellID->187924646],
+Cell[27289, 814, 257, 5, 23, "ExampleSection",ExpressionUUID->"19ae15dd-94f0-4a0f-bb72-484562de8bd5",
+ CellID->94871696],
+Cell[27549, 821, 250, 5, 23, "ExampleSection",ExpressionUUID->"4eedfd54-a200-4050-a335-e29799777ee5",
+ CellID->10896853],
+Cell[27802, 828, 254, 5, 23, "ExampleSection",ExpressionUUID->"0c167080-869a-4c65-b607-8ecda290a7a9",
+ CellID->5153939],
+Cell[28059, 835, 249, 5, 23, "ExampleSection",ExpressionUUID->"333fd5d1-0a23-4765-a631-183125d66e18",
+ CellID->990750058]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28345, 845, 110, 1, 72, "MetadataSection",ExpressionUUID->"b8aecdce-5b40-4d58-ac12-c2e588fdb826",
+ CellID->776621245],
+Cell[28458, 848, 473, 11, 26, "History",ExpressionUUID->"c0b96a9b-09f6-4e8a-acda-1391038560ba",
+ CellID->555252461],
+Cell[CellGroupData[{
+Cell[28956, 863, 483, 13, 21, "CategorizationSection",ExpressionUUID->"5da5efe7-a206-4aca-9785-d9ce97cd2c62",
+ CellID->13762792],
+Cell[29442, 878, 134, 2, 35, "Categorization",ExpressionUUID->"3bb0d5ca-8eb3-4006-bd18-dd9d02fd38fd",
+ CellID->295898774],
+Cell[29579, 882, 162, 2, 35, "Categorization",ExpressionUUID->"862721f0-6d96-459d-91b3-5162c88f7e8a",
+ CellID->79872519],
+Cell[29744, 886, 159, 2, 35, "Categorization",ExpressionUUID->"e94c5db1-c8de-479d-b9aa-fbc7e832df51",
+ CellID->55491736],
+Cell[29906, 890, 173, 2, 35, "Categorization",ExpressionUUID->"4e241004-ef20-48a7-81f7-4eb310ce945a",
+ CellID->731698610]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[30116, 897, 110, 1, 21, "KeywordsSection",ExpressionUUID->"6b1d3291-04b5-4d43-ac08-33d60f72cfe2",
+ CellID->791210093],
+Cell[30229, 900, 99, 1, 70, "Keywords",ExpressionUUID->"bba99328-1fbf-44db-be57-1b0ebe1a74df",
+ CellID->593047490]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[30365, 906, 119, 1, 21, "TemplatesSection",ExpressionUUID->"117630f0-c2d8-4939-83f3-a835d4f2da49",
+ CellID->335417256],
+Cell[30487, 909, 148, 2, 70, "Template",ExpressionUUID->"73955899-967f-4d12-8f7b-67eafbbba21a",
+ CellID->363763669],
+Cell[30638, 913, 137, 2, 70, "Template",ExpressionUUID->"e89baed7-1804-405d-b58a-cf8a86984633",
+ CellID->312915218],
+Cell[30778, 917, 135, 2, 70, "Template",ExpressionUUID->"6196e81f-3d63-4728-96d4-d013873bac68",
+ CellID->627388267],
+Cell[30916, 921, 137, 2, 70, "Template",ExpressionUUID->"45475f8e-977d-42d8-bebe-4e233ef1f6c9",
+ CellID->160394450]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

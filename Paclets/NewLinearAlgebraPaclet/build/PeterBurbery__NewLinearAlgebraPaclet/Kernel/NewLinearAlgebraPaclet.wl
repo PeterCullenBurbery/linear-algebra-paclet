@@ -27,6 +27,10 @@ PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizableMatrixQ;
 
 PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizeMatrix;
 
+PeterBurbery`NewLinearAlgebraPaclet`HessianMatrix;
+
+PeterBurbery`NewLinearAlgebraPaclet`JacobianMatrix;
+
 PeterBurbery`NewLinearAlgebraPaclet`LeftArrowMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`LowerArrowMatrix;
@@ -133,6 +137,19 @@ DeTriangularizeMatrix[matrix_?(LowerTriangularMatrixQ[#] &)] :=
 
 DeTriangularizeMatrix[matrix_?(UpperTriangularMatrixQ[#] &)] := 
  UpperTriangularize[matrix, 1] + LowerTriangularize[Transpose[matrix]]
+
+HessianMatrix // ClearAll
+
+HessianMatrix[function_, variables_] := D[function, {variables, 2}]
+
+HessianMatrix::usage = 
+  "HessianMatrix[function, ls] computes the Hessian matrix of second derivatives of function with respect to the list of indeterminates/variables ls.";
+
+JacobianMatrix//ClearAll
+
+JacobianMatrix::usage="JacobianMatrix[vector, ls] computes the Jacobian matrix for the vector-valued function represented by the vector vector with the indeterminates in the list ls.";
+
+JacobianMatrix[vector_?VectorQ,ls_?VectorQ]:=D[vector,{ls}]
 
 LeftArrowMatrix // ClearAll
 
@@ -302,6 +319,8 @@ UpperLeftTriangularMatrixQ[matrix_] := False
 
 UpperLeftTriangularMatrixQ[matrix_?MatrixQ] := 
  LowerTriangularMatrixQ[Reverse[matrix]]
+
+
 
 (* ::Section::Closed:: *)
 (*Package Footer*)

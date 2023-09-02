@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Burbery",
     "License" -> "BSD-3-Clause",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.10.0",
+    "Version" -> "1.12.0",
     "WolframVersion" -> "13.3+",
     "PrimaryContext" -> "PeterBurbery`NewLinearAlgebraPaclet`",
     "Extensions" -> {
@@ -24,6 +24,8 @@ PacletObject[
           "PeterBurbery`NewLinearAlgebraPaclet`DesymmetrizedMatrix",
           "PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizableMatrixQ",
           "PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizeMatrix",
+          "PeterBurbery`NewLinearAlgebraPaclet`HessianMatrix",
+          "PeterBurbery`NewLinearAlgebraPaclet`JacobianMatrix",
           "PeterBurbery`NewLinearAlgebraPaclet`LeftArrowMatrix",
           "PeterBurbery`NewLinearAlgebraPaclet`LowerArrowMatrix",
           "PeterBurbery`NewLinearAlgebraPaclet`LowerRightTriangularize",
