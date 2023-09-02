@@ -1,0 +1,1634 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     63765,       1624]
+NotebookOptionsPosition[     54024,       1425]
+NotebookOutlinePosition[     56731,       1490]
+CellTagsIndexPosition[     56645,       1485]
+WindowTitle->AntidiagonalMatrixQ
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ NEW LINEAR ALGEBRA PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "1e8f2748-9532-4a92-817d-6d446a8629e6"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "b126d956-61ab-4eca-842a-2d88ed6d03ea"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "d53b8d9e-7b77-4828-be15-616742809ebc"]
+         }],ExpressionUUID->"7dea58f0-77c3-490a-a9ae-59a153720ac8"],
+         StripOnInput->False],{
+        "\"Diagonal\"" :> Documentation`HelpLookup["paclet:ref/Diagonal"], 
+         "\"DiagonalMatrix\"" :> 
+         Documentation`HelpLookup["paclet:ref/DiagonalMatrix"], "\"Tr\"" :> 
+         Documentation`HelpLookup["paclet:ref/Tr"], "\"Band\"" :> 
+         Documentation`HelpLookup["paclet:ref/Band"], "\"DiagonalMatrixQ\"" :> 
+         Documentation`HelpLookup["paclet:ref/DiagonalMatrixQ"], Delimiter, 
+         StyleBox[
+          "\"Functions\"", "SeeAlsoSection", FontSize -> 14, FontSlant -> 
+           "Italic", StripOnInput -> False] :> 
+         NotebookFind[EvaluationNotebook[], "SeeAlsoSection", All, CellStyle],
+          StyleBox[
+          "\"Antidiagonal\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/Antidiagonal"], 
+         StyleBox[
+          "\"AntidiagonalMatrix\"", "SeeAlsoRelated", StripOnInput -> False] :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/AntidiagonalMatrix"]\
+},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "246c9f49-c2ea-4e9f-9b5d-15467fb5bb6c"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "2060399e-3a79-4b67-9bed-be78b4924d1b"]
+         }],ExpressionUUID->"b7cf3711-dbeb-46e3-8c1a-137a846b758f"],
+         StripOnInput->False],{
+        "\"Matrices\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/guide/Matrices"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "ba5295d5-241e-4343-9678-38e3aa11403a"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "82164516-68bc-4c95-8301-91d69a39bb22"]
+         }],ExpressionUUID->"4689fbf2-48d7-46aa-b4c3-297857fa2f9d"],
+         StripOnInput->False],{
+        "\"PeterBurbery/NewLinearAlgebraPaclet/ref/AntidiagonalMatrixQ\"" :> 
+         None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/NewLinearAlgebraPaclet/ref/\
+AntidiagonalMatrixQ"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+NewLinearAlgebraPaclet/ref/AntidiagonalMatrixQ.html"], StandardForm]], 
+                 "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$46426], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/NewLinearAlgebraPaclet/ref/AntidiagonalMatrixQ" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5a127eac-a469-4ce1-9bb9-f5d44c4ad3b9"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "ab299ecc-f198-4564-b9ee-aeba87bc898c"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"2907df53-c5f0-4e6e-9a04-f069fd09f9d1"],
+
+Cell["PeterBurbery`NewLinearAlgebraPaclet`", "ContextNameCell",ExpressionUUID->"2342020f-0b84-4d92-ba4c-fd3808f35ace"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "AntidiagonalMatrixQ", "ObjectName",ExpressionUUID->
+      "25e264b7-07ce-47b4-b990-11be8ddef71f"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"5d593dd4-c277-45ad-a365-686c8391d668"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "f0916bcc-b0ee-4cb1-97d0-d5e355d27619"]
+    }],ExpressionUUID->"e2143ff5-6955-46ce-b497-87e139c4d39a"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"bbd2bb5e-292e-4e02-95aa-\
+8a8d094830e4"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["AntidiagonalMatrixQ"]], 
+         "paclet:PeterBurberyNewLinearAlgebraPaclet/ref/AntidiagonalMatrixQ", 
+         "PeterBurberyNewLinearAlgebraPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["mat", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8f5ca03b-dff3-4226-a1bb-bf544ac890b0"],
+     "\[LineSeparator]gives ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["True"]], "paclet:ref/True"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "63c1798a-42bc-44e3-add5-c4787f236cfb"],
+     " if ",
+     Cell[BoxData[
+      StyleBox["mat", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "affcf987-54b2-49b5-9f0d-f50446bab072"],
+     " is antidiagonal,and ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["False"]], "paclet:ref/False"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "19c5758f-239e-4fb2-b5b3-cd875266529c"],
+     " otherwise. "
+    }],ExpressionUUID->"bb83df3c-6b97-46b1-9a23-fb46837365c6"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["AntidiagonalMatrixQ"]], 
+         "paclet:PeterBurberyNewLinearAlgebraPaclet/ref/AntidiagonalMatrixQ", 
+         "PeterBurberyNewLinearAlgebraPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["mat", "TI"], ",", 
+        StyleBox["k", "TI"]}], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "97b712cc-bf3b-427b-9364-f86db9992b8e"],
+     "\[LineSeparator]gives ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["True"]], "paclet:ref/True"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "d76f4ab8-5680-41c7-a2bf-cf09dcae5c99"],
+     " if ",
+     Cell[BoxData[
+      StyleBox["mat", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "e3bbd622-e60e-4333-ae34-e0743dd7e081"],
+     " has nonzero elements only on the ",
+     StyleBox["kth",
+      IgnoreSpellCheck->True],
+     " antidiagonal matrix, and ",
+     Cell[BoxData[
+      TemplateBox[{
+        Cell[
+         TextData["False"]], "paclet:ref/False"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "8e26c19f-29b5-45b0-a258-510ca07922aa"],
+     " otherwise."
+    }],ExpressionUUID->"1d6df0c6-a6eb-4e19-a37b-cb90dcb52521"]}
+  }]], "Usage",
+ CellID->434880317,ExpressionUUID->"76fa9a10-3e4a-41df-93c4-d589af5dc4f6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    DynamicBox[ToBoxes[
+      If[
+       MatchQ[
+        CurrentValue[
+         EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, 
+         Closed], 
+        Alternatives[Open, True]], 
+       Style[
+        Graphics[{
+          Thickness[0.18], 
+          RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+          Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+         PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+        0.68 Inherited], 
+       Rotate[
+        Style[
+         Graphics[{
+           Thickness[0.18], 
+           RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+           Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+          PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+         0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+     ImageSizeCache->{
+      13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+    ExpressionUUID->"58d4e158-a60d-4298-b5e1-0a318175cdee"],
+   Cell[BoxData[
+    TemplateBox[{1},
+     "Spacer1"]],ExpressionUUID->"ced04110-545a-4f2b-a69d-13aa35b6ed41"],
+   "Details and Options"
+  }], "NotesFrameText",ExpressionUUID->"eb8e2f90-ff50-472b-9f64-73ddb8f07494"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"81bbce7e-d2b5-4baf-b8f1-5199604a4726"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CacheGraphics->False,
+ CellID->965932281,ExpressionUUID->"cab3daa3-dcf7-493e-9b74-bdeaca2e6725"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["AntidiagonalMatrix", "ResourceFunctionHandle"]], "Text", 
+  "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "dc00d518-5fb1-4df3-b093-9e038e3a87f3"],
+ "[",
+ Cell[BoxData[
+  StyleBox["list", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "0a7df01a-bfef-417c-8a23-bf5f434300fc"],
+ "] creates a matrix where the antidiagonal is given by the elements ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    StyleBox["x", "TI"], 
+    StyleBox["i", "TI"]], TraditionalForm]],ExpressionUUID->
+  "cec77659-ef09-433c-bec4-a4eba3023a54"],
+ " of ",
+ Cell[BoxData[
+  StyleBox["list", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "68a92e08-98e2-4c6b-a2bb-341bef615066"],
+ ":\[LineSeparator]",
+ Cell[BoxData[
+  GraphicsBox[{
+    {Thickness[0.01], {{InsetBox[
+        StyleBox[
+         SubscriptBox["\<\"x\"\>", "4"],
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->Hue[0.6, 0.59, 0.9],
+         $CellContext`LineColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`FrontFaceColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`GraphicsColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`BackFaceColor -> Hue[0.6, 0.59, 0.9]], {1, 1}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {1, 2}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {1, 3}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {1, 4}]}, {InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {2, 1}], InsetBox[
+        StyleBox[
+         SubscriptBox["\<\"x\"\>", "3"],
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->Hue[0.6, 0.59, 0.9],
+         $CellContext`LineColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`FrontFaceColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`GraphicsColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`BackFaceColor -> Hue[0.6, 0.59, 0.9]], {2, 2}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {2, 3}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {2, 4}]}, {InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {3, 1}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {3, 2}], InsetBox[
+        StyleBox[
+         SubscriptBox["\<\"x\"\>", "2"],
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->Hue[0.6, 0.59, 0.9],
+         $CellContext`LineColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`FrontFaceColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`GraphicsColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`BackFaceColor -> Hue[0.6, 0.59, 0.9]], {3, 3}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {3, 4}]}, {InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {4, 1}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {4, 2}], InsetBox[
+        StyleBox["0",
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->GrayLevel[0],
+         $CellContext`LineColor -> GrayLevel[0],
+         $CellContext`FrontFaceColor -> GrayLevel[0],
+         $CellContext`GraphicsColor -> GrayLevel[0],
+         $CellContext`BackFaceColor -> GrayLevel[0]], {4, 3}], InsetBox[
+        StyleBox[
+         SubscriptBox["\<\"x\"\>", "1"],
+         StripOnInput->False,
+         FontSize->12,
+         FontColor->Hue[0.6, 0.59, 0.9],
+         $CellContext`LineColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`FrontFaceColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`GraphicsColor -> Hue[0.6, 0.59, 0.9],
+         $CellContext`BackFaceColor -> Hue[0.6, 0.59, 0.9]], {4, 4}]}}, {
+      LineBox[{{0.5, 0.25}, {0, 0.25}, {0, 4.75}, {0.5, 4.75}}], 
+      LineBox[{{4.5, 0.25}, {5, 0.25}, {5, 4.75}, {4.5, 4.75}}]}}, 
+    {Hue[0.6, 0.59, 0.9], Thickness[0.02], Arrowheads[0.2], 
+     ArrowBox[{{4, 4}, {0.8, 0.8}}]}},
+   ImageSize->115]],ExpressionUUID->"941cc455-0e64-4604-9a13-af4bf45466eb"]
+}], "Notes",
+ CellID->180717616,ExpressionUUID->"141e5c51-2323-42d8-9ffb-18a3ae7a9c11"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+   StyleBox["m", "TI"], "]"}]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "aedc2f44-5d0f-46ae-bcb4-78dba640f9e2"],
+ " works even if ",
+ Cell[BoxData[
+  StyleBox["m", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "01dd48af-f641-41db-b8ed-4e7f5b4f6140"],
+ " is not square."
+}], "Notes",
+ CellID->91475337,ExpressionUUID->"a4ae2698-ef36-4183-a1d2-501e01235386"],
+
+Cell[TextData[{
+ "For positive ",
+ Cell[BoxData[
+  StyleBox["k", "TI"]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "b6120ed2-ab05-41d6-b50e-383080393ec4"],
+ ", ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+   RowBox[{
+    StyleBox["m", "TI"], ",", 
+    StyleBox["k", "TI"]}], "]"}]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "e31e1d68-ac71-4da8-9dc7-dd9259eca165"],
+ " tests whether the antidiagonal is above the leading antidiagonal. ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+   RowBox[{
+    StyleBox["m", "TI"], ",", 
+    RowBox[{"-", 
+     StyleBox["k", "TI"]}]}], "]"}]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "100ed883-58d8-4531-85b6-341581cbea9f"],
+ " tests whether the antidiagonal is below."
+}], "Notes",
+ CellID->151138692,ExpressionUUID->"2ea33638-1ef2-4cdf-b711-1d3498ecca2b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"]], "Text", 
+  "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "c4af92c8-51b6-48b8-97c3-b8f45700bdcd"],
+ " works on ",
+ Cell[BoxData[
+  TagBox[
+   TemplateBox[{
+     Cell[
+      TextData[
+       StyleBox[
+       "SparseArray", "SymbolsRefLink", ShowStringCharacters -> True, 
+        FontFamily -> "Source Sans Pro"]]], "paclet:ref/SparseArray"},
+    "RefLink",
+    BaseStyle->{"InlineFormula"}],
+   MouseAppearanceTag["LinkHand"]]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "98971712-5a13-4aa0-9984-7e3f618b4696"],
+ " matrices."
+}], "Notes",
+ CellID->624187063,ExpressionUUID->"056970a4-2f02-4e3a-af18-9d59e544ed35"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"8c5fd9d5-381d-49b3-b2a1-b925298b491d"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"f8324cfe-7b16-4120-80fd-bc18d2835e51"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(8)", "ExampleCount",ExpressionUUID->
+  "c8574e30-d1b1-4b7f-b332-0d93686b794d"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->85645830,ExpressionUUID->"7046eb61-5462-4de2-82b3-852d7d9bab30"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`NewLinearAlgebraPaclet`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->24939210,ExpressionUUID->"f07374a6-7fda-4848-9abf-5714e2f16243"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"0fee98ce-4b94-4e6b-b905-5dcf2e44bdd2"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"864250b1-5d33-4d46-9ec9-c7bc66891373"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "c25dd4db-1dd8-4ba9-89fc-ab68c2f89291"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->267338682,ExpressionUUID->"68844921-d6e8-4ece-a108-6789cd0c0d51"],
+
+Cell["Check if a matrix is an antidiagonal matrix:", "ExampleText",
+ CellID->833995582,ExpressionUUID->"f8956ea6-9ead-4192-9353-e1ce55cb0337"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "3", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "0", ",", "0"}], "}"}]}], "}"}], "]"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->77862094,ExpressionUUID->"57f67052-9c47-4563-ba2e-0a68f1b4cf62"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->265165028,ExpressionUUID->"2c9b5625-de90-4036-b0b1-16a29df96c73"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "665e3e0c-06c7-4b35-8b49-986d3776a6fb"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107562,ExpressionUUID->"109f7b8d-7902-4366-9dc2-5a9eee25162c"],
+
+Cell["\<\
+Test if the antidiagonal is above the leading antidiagonal one:\
+\>", "ExampleText",
+ CellID->471844266,ExpressionUUID->"89581293-b33f-441b-b9c2-8ce82602946f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", "1"}], 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->380287537,ExpressionUUID->"cc9f701d-72cf-4f15-8198-ff8f7b96fe5b"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->21304363,ExpressionUUID->"12d1a929-2885-4b92-b7a6-8ac20342aaf8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "eba0630c-6dbf-4ece-8974-59c0b98b655b"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107563,ExpressionUUID->"f351ac4e-411d-4d90-9da8-960da4643d66"],
+
+Cell["An example of a matrix that is not antidiagonal:", "ExampleText",
+ CellID->803257194,ExpressionUUID->"fc913c09-9e64-4910-ad35-c166636cb2f6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "0", ",", "0.1"}], "}"}]}], "}"}], "]"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->618017376,ExpressionUUID->"edcb1178-559c-477b-badc-bc9409603369"],
+
+Cell[BoxData["False"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->161299426,ExpressionUUID->"347585f3-bc19-4ce7-812e-584c547c379e"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"d7689a05-6571-46d6-9e25-3ccd5c3650a3"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"2dea4894-0e88-4046-9f8b-28dabb9db957"],
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "3880c9c3-1a50-45d5-848e-95c8ee3e492a"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->114846065,ExpressionUUID->"f3b06fc2-47f6-4401-9c2d-03dab33696b6"],
+
+Cell["A complex matrix:", "ExampleText",
+ CellID->43326570,ExpressionUUID->"168fa4c0-285c-47a5-a9a5-b0ebdd566160"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"1.", "+", "I"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"2.", "-", "I"}], ",", "0"}], "}"}]}], "}"}], "]"}]], "Input", \
+"ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->552825607,ExpressionUUID->"b038595c-38ba-4b48-984e-7b493234181b"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->232781654,ExpressionUUID->"a4b1ddb3-9266-45ec-a3c6-805348dfaff4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "def52fd0-fc4c-4f3c-9527-f8a59a8f8079"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107564,ExpressionUUID->"7a70dc30-fdc1-4d1c-a2ee-f17da78b9c8e"],
+
+Cell["Test a rectangular matrix:", "ExampleText",
+ CellID->645027095,ExpressionUUID->"eeaf6d46-f611-4dd9-9193-2974c2c0e0f0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "1", ",", "0"}], "}"}]}], "}"}], 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->677643652,ExpressionUUID->"a616ef3c-fe99-4a89-a357-4e1a4cb92947"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->142480557,ExpressionUUID->"573e6550-c1ae-4b42-9dc1-dc73b6a6fad5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "2d0f4ebc-b33b-4967-976f-6ed9f33a6d71"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14107565,ExpressionUUID->"63878d6e-2695-4f1e-a8d2-42a259bcccff"],
+
+Cell[TextData[{
+ "Test a ",
+ Cell[BoxData[
+  TagBox[
+   TemplateBox[{
+     Cell[
+      TextData[
+       StyleBox[
+       "SparseArray", "SymbolsRefLink", ShowStringCharacters -> True, 
+        FontFamily -> "Source Sans Pro"]]], "paclet:ref/SparseArray"},
+    "RefLink",
+    BaseStyle->{"InlineFormula"}],
+   MouseAppearanceTag["LinkHand"]]], "Text", "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "e3fb381e-a4dc-48e5-b552-7cfd44e0863c"],
+ " matrix:"
+}], "ExampleText",
+ CellID->382146190,ExpressionUUID->"3f990204-1f6c-4895-9d29-cafc1418ae8a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  InterpretationBox[
+   RowBox[{
+    TagBox["SparseArray",
+     "SummaryHead"], "[", 
+    DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+     TemplateBox[{
+       PaneSelectorBox[{False -> GridBox[{{
+             PaneBox[
+              ButtonBox[
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "FEBitmaps", "SquarePlusIconMedium"]], 
+               ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+               Evaluator -> Automatic, Method -> "Preemptive"], 
+              Alignment -> {Center, Center}, ImageSize -> 
+              Dynamic[{
+                Automatic, 
+                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                  Magnification])}]], 
+             GraphicsBox[
+              
+              RasterBox[{{{0.235431, 0.32765, 0.833291}, {0.235431, 0.32765, 
+               0.833291}, {0.772061, 0.92462, 0.998703}, {0.235431, 0.32765, 
+               0.833291}}, {{0.235431, 0.32765, 0.833291}, {0.235431, 0.32765,
+                0.833291}, {0.235431, 0.32765, 0.833291}, {0.772061, 0.92462, 
+               0.998703}}}, {{0, 0}, {4, 2}}, {0, 1}], AspectRatio -> 1, Axes -> 
+              False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+              Directive[
+                Opacity[0.5], 
+                Thickness[Tiny], 
+                RGBColor[0.368417, 0.506779, 0.709798]], 
+              FrameTicks -> {{None, None}, {None, None}}, GridLinesStyle -> 
+              Directive[
+                GrayLevel[0.5, 0.4]], ImageSize -> 
+              Dynamic[{
+                Automatic, 
+                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                  Magnification])}], 
+              Method -> {
+               "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
+                Automatic, 
+                "DefaultGraphicsInteraction" -> {
+                 "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+                  "Effects" -> {
+                   "Highlight" -> {"ratio" -> 2}, 
+                    "HighlightPoint" -> {"ratio" -> 2}, 
+                    "Droplines" -> {
+                    "freeformCursorMode" -> True, 
+                    "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+                "DefaultPlotStyle" -> Automatic, "DomainPadding" -> 
+                Scaled[0.02], "RangePadding" -> Scaled[0.05]}], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Specified elements: \"", "SummaryItemAnnotation"],
+                   "\[InvisibleSpace]", 
+                  TagBox["2", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Dimensions: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox[
+                   RowBox[{"{", 
+                    RowBox[{"2", ",", "4"}], "}"}], "SummaryItem"]}]}}, 
+              GridBoxAlignment -> {
+               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+              False, GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+              BaseStyle -> {
+               ShowStringCharacters -> False, NumberMarks -> False, 
+                PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+           GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+           BaselinePosition -> {1, 1}], True -> GridBox[{{
+             PaneBox[
+              ButtonBox[
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "FEBitmaps", "SquareMinusIconMedium"]], 
+               ButtonFunction :> (Typeset`open$$ = False), Appearance -> None,
+                Evaluator -> Automatic, Method -> "Preemptive"], 
+              Alignment -> {Center, Center}, ImageSize -> 
+              Dynamic[{
+                Automatic, 
+                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                  Magnification])}]], 
+             GraphicsBox[
+              
+              RasterBox[{{{0.235431, 0.32765, 0.833291}, {0.235431, 0.32765, 
+               0.833291}, {0.772061, 0.92462, 0.998703}, {0.235431, 0.32765, 
+               0.833291}}, {{0.235431, 0.32765, 0.833291}, {0.235431, 0.32765,
+                0.833291}, {0.235431, 0.32765, 0.833291}, {0.772061, 0.92462, 
+               0.998703}}}, {{0, 0}, {4, 2}}, {0, 1}], AspectRatio -> 1, Axes -> 
+              False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+              Directive[
+                Opacity[0.5], 
+                Thickness[Tiny], 
+                RGBColor[0.368417, 0.506779, 0.709798]], 
+              FrameTicks -> {{None, None}, {None, None}}, GridLinesStyle -> 
+              Directive[
+                GrayLevel[0.5, 0.4]], ImageSize -> 
+              Dynamic[{
+                Automatic, 
+                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                  Magnification])}], 
+              Method -> {
+               "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
+                Automatic, 
+                "DefaultGraphicsInteraction" -> {
+                 "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+                  "Effects" -> {
+                   "Highlight" -> {"ratio" -> 2}, 
+                    "HighlightPoint" -> {"ratio" -> 2}, 
+                    "Droplines" -> {
+                    "freeformCursorMode" -> True, 
+                    "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+                "DefaultPlotStyle" -> Automatic, "DomainPadding" -> 
+                Scaled[0.02], "RangePadding" -> Scaled[0.05]}], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Specified elements: \"", "SummaryItemAnnotation"],
+                   "\[InvisibleSpace]", 
+                  TagBox["2", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Dimensions: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox[
+                   RowBox[{"{", 
+                    RowBox[{"2", ",", "4"}], "}"}], "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Default: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["0", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Density: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["0.25`", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Elements:\"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["\"\"", "SummaryItem"]}]}, {
+                TagBox[
+                 TagBox[
+                  GridBox[{{
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", 
+                    StyleBox[
+                    PaneBox[
+                    "1", ContentPadding -> False, FrameMargins -> 0, 
+                    StripOnInput -> True, BaselinePosition -> Baseline, 
+                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
+                    False]}]}, {
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "3"}], "}"}], "\[Rule]", 
+                    StyleBox[
+                    PaneBox[
+                    "1", ContentPadding -> False, FrameMargins -> 0, 
+                    StripOnInput -> True, BaselinePosition -> Baseline, 
+                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
+                    False]}]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                   DefaultBaseStyle -> "Column", 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                  "Column"], "SummaryItem"]}}, 
+              GridBoxAlignment -> {
+               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+              False, GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+              BaseStyle -> {
+               ShowStringCharacters -> False, NumberMarks -> False, 
+                PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+           GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+           BaselinePosition -> {1, 1}]}, 
+        Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+      "SummaryPanel"],
+     DynamicModuleValues:>{}], "]"}],
+   SparseArray[Automatic, {2, 4}, 0, {1, {{0, 1, 2}, {{4}, {3}}}, {1, 1}}],
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->786874982,ExpressionUUID->"478c6cfa-f1da-4170-ba22-76fcde945e5d"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->145825590,ExpressionUUID->"dd2554bb-9b5e-42cc-a081-32ed24a41d5c"]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"9dc3c6a3-ffc3-4912-85df-d8a4e9ec0865"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"c78ecbf3-e541-430e-b125-1c59562b017f"],
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "514af220-92f5-4ab9-acc3-cdfea107fb0b"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->355371059,ExpressionUUID->"6d21e7f5-250b-425d-b9af-f91750327e25"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "ExampleSubsection", "0"}, Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"6abcf6ca-0eeb-4914-8aa6-d44855122486"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"942e3e9f-85df-448b-84f9-8cc078b49d31"],
+ "Tolerance",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "e60cb988-89df-4372-bff6-37a662d3a4dc"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->459962395,ExpressionUUID->"6db0a0cf-36c8-478f-b667-181ef89c1715"],
+
+Cell["\<\
+Check if the off-antidiagonal elements are zero within a certain tolerance:\
+\>", "ExampleText",
+ CellID->708272991,ExpressionUUID->"9ba05d4b-92aa-4fc4-a057-a83fbe29e74d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "0.001"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", "1", ",", 
+   RowBox[{"Tolerance", "\[Rule]", "0.01"}]}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->847364950,ExpressionUUID->"19aa3ec4-defa-460c-892e-659dcb6c0947"],
+
+Cell[BoxData["True"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->489499305,ExpressionUUID->"b50f30f3-ecfc-45e8-a851-3b50c802a72d"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, 
+  Closed]]]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{
+    13.600000000000001`, {0.5800000000000001, 13.020000000000001`}}]],
+  ExpressionUUID->"5007edbf-d7ae-41a7-8893-58652a8145bb"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"021da565-62de-4231-bf12-a551ba88f77a"],
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "bd8f4896-b8aa-4f73-8766-925625c8537b"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->226721167,ExpressionUUID->"8ba263a7-c3f9-4663-92fd-7c0b1257c2d8"],
+
+Cell["If the expression is not a matrix it will return false:", "ExampleText",
+ CellID->931536497,ExpressionUUID->"9053abec-93fd-47fa-b8ef-679492051326"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", "1", 
+  "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->56479222,ExpressionUUID->"2dcde416-69ee-4f1a-8371-d228e8d2fbeb"],
+
+Cell[BoxData["False"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->3249952,ExpressionUUID->"3e799de2-6ea4-40b9-80e3-c00605489482"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["AntidiagonalMatrixQ", "ResourceFunctionHandle"], "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}]], "Input", "ExampleInput",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[2]:=",
+ CellID->824430711,ExpressionUUID->"13bd5204-5983-41e0-9727-9d3f2aa64160"],
+
+Cell[BoxData["False"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->92558206,ExpressionUUID->"b0901aa6-a252-4a7a-a77f-95a78248c44a"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Antidiagonal"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/Antidiagonal", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "992c7a69-6ae7-4fa1-b992-bbd89300e868"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["AntidiagonalMatrix"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/\
+AntidiagonalMatrix", "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"d5095b5e-5bff-4f43-a0ca-82f4cf3e8d95",ExpressionUUID->
+         "5ca66e8c-8754-437d-8961-6a06e073c479"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Diagonal"]], "paclet:ref/Diagonal"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"e9b3c78f-ffee-488b-a6b8-489e63320d1c",ExpressionUUID->
+         "48902a4a-ec25-4c95-a85c-a2b782b909a6"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["DiagonalMatrix"]], "paclet:ref/DiagonalMatrix"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"cb763070-f796-4d9e-af93-e747842f088d",ExpressionUUID->
+         "1ead7011-ecfb-4b68-8ea2-dbe63b9e1d72"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Tr"]], "paclet:ref/Tr"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"db5693e6-f1bd-4ed4-8dc7-52a6984cea80",ExpressionUUID->
+         "4813e808-2f93-474a-9ecd-b1ed6160092f"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Band"]], "paclet:ref/Band"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"9d56f76c-6d28-46c7-93c9-404a8ae5f2b4",ExpressionUUID->
+         "00a264ce-cce9-41ec-b0f0-37e176dc057c"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["DiagonalMatrixQ"]], "paclet:ref/DiagonalMatrixQ"},
+          "RefLink",
+          BaseStyle->{"InlineFormula"}]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"b3f793a8-1e86-464d-be8f-8a40f4409546",ExpressionUUID->
+         "abeaf5b5-7212-4387-91cb-e1608b901f88"]
+       }], "SeeAlso",ExpressionUUID->"39eef40c-50b6-4067-9dd0-59d6ec6494fe"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"23fb4274-b8d6-4bd0-a75b-c3ae8f6e3526"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Matrices"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/guide/Matrices"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "2b198553-8d2d-45c5-a6b5-8646c7c75847"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"17ad4af2-426e-4342-8c52-\
+ff408638dd14"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"418a913c-6a21-4675-85fc-8e38aebd9903"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 557},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"AntidiagonalMatrixQ",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, 
+    "ExampleSection" -> {
+     "0" -> Open, "1" -> Closed, "2" -> Closed, "3" -> Closed}, 
+    "NotesSection" -> Closed, "ExampleSubsection" -> {"0" -> Closed}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 9, 1, 21, 26, 45.3848776}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`NewLinearAlgebraPaclet`", 
+    "keywords" -> {
+     "antidiagonal matrix", "anti diagonal matrix", "counter diagonal matrix",
+       "secondary diagonal matrix", "trailing diagonal matrix", 
+      "minor diagonal matrix", "bad diagonal matrix"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ New Linear Algebra Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/NewLinearAlgebraPaclet", "status" -> 
+    "None", "summary" -> 
+    "AntidiagonalMatrixQ[mat] gives True if mat is antidiagonal,and False \
+otherwise. AntidiagonalMatrixQ[mat, k] gives True if mat has nonzero elements \
+only on the kth antidiagonal matrix, and False otherwise.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "AntidiagonalMatrixQ", "titlemodifier" -> 
+    "", "metadescription" -> "", "windowtitle" -> "AntidiagonalMatrixQ", 
+    "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/NewLinearAlgebraPaclet/ref/AntidiagonalMatrixQ"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 27, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (July 27, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"067c9a00-6887-4eb5-b07b-ce117e7fd571"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[22080, 571, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"7046eb61-5462-4de2-82b3-852d7d9bab30",
+   CellTags->"PrimaryExamplesSection",
+   CellID->85645830]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 56446, 1478}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[594, 21, 6386, 150, 57, "AnchorBarGrid",ExpressionUUID->"2907df53-c5f0-4e6e-9a04-f069fd09f9d1",
+ CellID->1],
+Cell[6983, 173, 118, 0, 23, "ContextNameCell",ExpressionUUID->"2342020f-0b84-4d92-ba4c-fd3808f35ace"],
+Cell[CellGroupData[{
+Cell[7126, 177, 562, 14, 56, "ObjectNameGrid",ExpressionUUID->"bbd2bb5e-292e-4e02-95aa-8a8d094830e4"],
+Cell[7691, 193, 3023, 83, 192, "Usage",ExpressionUUID->"76fa9a10-3e4a-41df-93c4-d589af5dc4f6",
+ CellID->434880317]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10751, 281, 1919, 48, 37, "NotesSection",ExpressionUUID->"cab3daa3-dcf7-493e-9b74-bdeaca2e6725",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->965932281],
+Cell[12673, 331, 6970, 165, 70, "Notes",ExpressionUUID->"141e5c51-2323-42d8-9ffb-18a3ae7a9c11",
+ CellID->180717616],
+Cell[19646, 498, 540, 14, 70, "Notes",ExpressionUUID->"a4ae2698-ef36-4183-a1d2-501e01235386",
+ CellID->91475337],
+Cell[20189, 514, 1000, 27, 70, "Notes",ExpressionUUID->"2ea33638-1ef2-4cdf-b711-1d3498ecca2b",
+ CellID->151138692],
+Cell[21192, 543, 761, 22, 70, "Notes",ExpressionUUID->"056970a4-2f02-4e3a-af18-9d59e544ed35",
+ CellID->624187063]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "NotesSection"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[22080, 571, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"7046eb61-5462-4de2-82b3-852d7d9bab30",
+ CellTags->"PrimaryExamplesSection",
+ CellID->85645830],
+Cell[23502, 610, 226, 4, 26, "Input",ExpressionUUID->"f07374a6-7fda-4848-9abf-5714e2f16243",
+ CellID->24939210],
+Cell[CellGroupData[{
+Cell[23753, 618, 1398, 36, 30, "ExampleSection",ExpressionUUID->"68844921-d6e8-4ece-a108-6789cd0c0d51",
+ CellID->267338682],
+Cell[25154, 656, 142, 1, 38, "ExampleText",ExpressionUUID->"f8956ea6-9ead-4192-9353-e1ce55cb0337",
+ CellID->833995582],
+Cell[CellGroupData[{
+Cell[25321, 661, 526, 14, 26, "Input",ExpressionUUID->"57f67052-9c47-4563-ba2e-0a68f1b4cf62",
+ CellID->77862094],
+Cell[25850, 677, 129, 2, 35, "Output",ExpressionUUID->"2c9b5625-de90-4036-b0b1-16a29df96c73",
+ CellID->265165028]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26016, 684, 241, 5, 13, "ExampleDelimiter",ExpressionUUID->"109f7b8d-7902-4366-9dc2-5a9eee25162c",
+ CellID->14107562],
+Cell[26260, 691, 169, 3, 38, "ExampleText",ExpressionUUID->"89581293-b33f-441b-b9c2-8ce82602946f",
+ CellID->471844266],
+Cell[CellGroupData[{
+Cell[26454, 698, 559, 15, 70, "Input",ExpressionUUID->"cc9f701d-72cf-4f15-8198-ff8f7b96fe5b",
+ CellID->380287537],
+Cell[27016, 715, 128, 2, 35, "Output",ExpressionUUID->"12d1a929-2885-4b92-b7a6-8ac20342aaf8",
+ CellID->21304363]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27193, 723, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"f351ac4e-411d-4d90-9da8-960da4643d66",
+ CellID->14107563],
+Cell[27437, 730, 146, 1, 70, "ExampleText",ExpressionUUID->"fc913c09-9e64-4910-ad35-c166636cb2f6",
+ CellID->803257194],
+Cell[CellGroupData[{
+Cell[27608, 735, 529, 14, 70, "Input",ExpressionUUID->"edcb1178-559c-477b-badc-bc9409603369",
+ CellID->618017376],
+Cell[28140, 751, 130, 2, 35, "Output",ExpressionUUID->"347585f3-bc19-4ce7-812e-584c547c379e",
+ CellID->161299426]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[28431, 762, 1412, 37, 70, "ExampleSection",ExpressionUUID->"f3b06fc2-47f6-4401-9c2d-03dab33696b6",
+ CellID->114846065],
+Cell[29846, 801, 114, 1, 70, "ExampleText",ExpressionUUID->"168fa4c0-285c-47a5-a9a5-b0ebdd566160",
+ CellID->43326570],
+Cell[CellGroupData[{
+Cell[29985, 806, 492, 14, 70, "Input",ExpressionUUID->"b038595c-38ba-4b48-984e-7b493234181b",
+ CellID->552825607],
+Cell[30480, 822, 129, 2, 35, "Output",ExpressionUUID->"a4b1ddb3-9266-45ec-a3c6-805348dfaff4",
+ CellID->232781654]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30646, 829, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"7a70dc30-fdc1-4d1c-a2ee-f17da78b9c8e",
+ CellID->14107564],
+Cell[30890, 836, 124, 1, 70, "ExampleText",ExpressionUUID->"eeaf6d46-f611-4dd9-9193-2974c2c0e0f0",
+ CellID->645027095],
+Cell[CellGroupData[{
+Cell[31039, 841, 477, 12, 70, "Input",ExpressionUUID->"a616ef3c-fe99-4a89-a357-4e1a4cb92947",
+ CellID->677643652],
+Cell[31519, 855, 129, 2, 35, "Output",ExpressionUUID->"573e6550-c1ae-4b42-9dc1-dc73b6a6fad5",
+ CellID->142480557]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31697, 863, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"63878d6e-2695-4f1e-a8d2-42a259bcccff",
+ CellID->14107565],
+Cell[31941, 870, 565, 17, 70, "ExampleText",ExpressionUUID->"3f990204-1f6c-4895-9d29-cafc1418ae8a",
+ CellID->382146190],
+Cell[CellGroupData[{
+Cell[32531, 891, 9384, 192, 70, "Input",ExpressionUUID->"478c6cfa-f1da-4170-ba22-76fcde945e5d",
+ CellID->786874982],
+Cell[41918, 1085, 129, 2, 35, "Output",ExpressionUUID->"dd2554bb-9b5e-42cc-a081-32ed24a41d5c",
+ CellID->145825590]
+}, Open  ]]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "1"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[42208, 1096, 1414, 37, 70, "ExampleSection",ExpressionUUID->"6d21e7f5-250b-425d-b9af-f91750327e25",
+ CellID->355371059],
+Cell[CellGroupData[{
+Cell[43647, 1137, 1425, 37, 70, "ExampleSubsection",ExpressionUUID->"6db0a0cf-36c8-478f-b667-181ef89c1715",
+ CellID->459962395],
+Cell[45075, 1176, 181, 3, 70, "ExampleText",ExpressionUUID->"9ba05d4b-92aa-4fc4-a057-a83fbe29e74d",
+ CellID->708272991],
+Cell[CellGroupData[{
+Cell[45281, 1183, 611, 15, 70, "Input",ExpressionUUID->"19aa3ec4-defa-460c-892e-659dcb6c0947",
+ CellID->847364950],
+Cell[45895, 1200, 129, 2, 35, "Output",ExpressionUUID->"b50f30f3-ecfc-45e8-a851-3b50c802a72d",
+ CellID->489499305]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSubsection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "2"}, Closed]]]],
+Cell[CellGroupData[{
+Cell[46288, 1213, 1429, 37, 70, "ExampleSection",ExpressionUUID->"8ba263a7-c3f9-4663-92fd-7c0b1257c2d8",
+ CellID->226721167],
+Cell[47720, 1252, 153, 1, 70, "ExampleText",ExpressionUUID->"9053abec-93fd-47fa-b8ef-679492051326",
+ CellID->931536497],
+Cell[CellGroupData[{
+Cell[47898, 1257, 287, 6, 70, "Input",ExpressionUUID->"2dcde416-69ee-4f1a-8371-d228e8d2fbeb",
+ CellID->56479222],
+Cell[48188, 1265, 128, 2, 35, "Output",ExpressionUUID->"3e799de2-6ea4-40b9-80e3-c00605489482",
+ CellID->3249952]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48353, 1272, 342, 7, 70, "Input",ExpressionUUID->"13bd5204-5983-41e0-9727-9d3f2aa64160",
+ CellID->824430711],
+Cell[48698, 1281, 129, 2, 35, "Output",ExpressionUUID->"b0901aa6-a252-4a7a-a77f-95a78248c44a",
+ CellID->92558206]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "3"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[49069, 1292, 4128, 108, 70, "SeeAlsoSection",ExpressionUUID->"23fb4274-b8d6-4bd0-a75b-c3ae8f6e3526"],
+Cell[53200, 1402, 739, 19, 70, "MoreAboutSection",ExpressionUUID->"17ad4af2-426e-4342-8c52-ff408638dd14"],
+Cell[53942, 1423, 78, 0, 70, "FooterCell",ExpressionUUID->"418a913c-6a21-4675-85fc-8e38aebd9903"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

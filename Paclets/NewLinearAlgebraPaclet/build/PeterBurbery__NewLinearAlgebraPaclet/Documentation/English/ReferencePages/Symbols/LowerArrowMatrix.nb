@@ -1,0 +1,658 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     24477,        648]
+NotebookOptionsPosition[     19682,        546]
+NotebookOutlinePosition[     21902,        602]
+CellTagsIndexPosition[     21817,        597]
+WindowTitle->LowerArrowMatrix
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ NEW LINEAR ALGEBRA PACLET SYMBOL", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "a0d0a995-0e83-4879-aea4-1f4be10c5a24"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "e1aa4a6e-40f6-4b3d-8959-a41158a654f9"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "See Also",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "64f75f92-f9bc-45ca-9477-19eabb77c44f"]
+         }],ExpressionUUID->"475d914e-cb3e-4a67-807b-a325d5ca09ed"],
+         StripOnInput->False],{
+        "\"RightArrowMatrix\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/RightArrowMatrix"], 
+         "\"TopArrowMatrix\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/TopArrowMatrix"], 
+         "\"LeftArrowMatrix\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/LeftArrowMatrix"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"SeeAlso"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "8d874216-41cd-4411-a3b9-047c847d7835"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Related Guides",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "91fc94ca-18c6-4aa9-91ee-fa21f811a717"]
+         }],ExpressionUUID->"bad6b5dd-59ca-4dc1-86aa-8ac8fdc019dc"],
+         StripOnInput->False],{
+        "\"Matrices\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/NewLinearAlgebraPaclet/guide/Matrices"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"MoreAbout"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "d10c7ecd-3801-483f-a61d-80846351a9d9"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "22d0ac88-5cd1-49d9-a101-f0283c173b91"]
+         }],ExpressionUUID->"291ded46-9fcc-4468-8514-3e0d93fb8052"],
+         StripOnInput->False],{
+        "\"PeterBurbery/NewLinearAlgebraPaclet/ref/LowerArrowMatrix\"" :> 
+         None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/NewLinearAlgebraPaclet/ref/\
+LowerArrowMatrix"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+NewLinearAlgebraPaclet/ref/LowerArrowMatrix.html"], StandardForm]], "Input", 
+                 TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$171421], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/NewLinearAlgebraPaclet/ref/LowerArrowMatrix" <> 
+               ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "988412a7-04c3-4d2d-b511-a1e1eb1320e3"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "66b0acf1-b7c2-4d9f-8523-4acf0edc1c24"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"8671451f-a300-4e49-9be2-064a0b32b1b4"],
+
+Cell["PeterBurbery`NewLinearAlgebraPaclet`", "ContextNameCell",ExpressionUUID->"32e3d65e-295d-4bab-aa62-d53d57bb3b05"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "LowerArrowMatrix", "ObjectName",ExpressionUUID->
+      "4b18078b-70a6-400a-8c59-1df6aeb602e7"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"cee4f5ad-93d1-4ab6-bdd5-41a2b066b4be"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "831497f0-3549-42a9-93e3-9b042d76faa0"]
+    }],ExpressionUUID->"644656a1-aeb3-4784-85b0-205d5c3b93ba"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"bdc19f4a-33cd-4dcc-a59a-\
+8997682d9b2d"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["LowerArrowMatrix"]], 
+         "paclet:PeterBurberyNewLinearAlgebraPaclet/ref/LowerArrowMatrix", 
+         "PeterBurberyNewLinearAlgebraPaclet Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["matrix", "TI"], "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "b341524f-b41e-467a-a2cb-6353ed159e76"],
+     "\[LineSeparator]forms a lower arrow matrix from ",
+     Cell[BoxData[
+      StyleBox["matrix", "TI"]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "5c4d56e2-53fd-4a44-ab00-edde446fd4c5"],
+     "."
+    }],ExpressionUUID->"2052c326-175e-4dfb-b7d5-2e58d3db691b"]}
+  }]], "Usage",
+ CellID->502498013,ExpressionUUID->"7e7249f8-efe0-427e-9bfe-f4a9c6bc3fc9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"648ed8f6-bbe9-4109-906b-5cc80b051288"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"715dfe53-80a5-49ca-bc21-c176e28196bc"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "108c8e21-87cc-4cb9-bfe3-87a91cc78708"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->564704567,ExpressionUUID->"994c4af1-2ac0-4c01-97dc-3a122df8b19b"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`NewLinearAlgebraPaclet`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->34513200,ExpressionUUID->"d1018283-7e1a-4dc1-aa28-ed30ac6dec1c"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"a49d984a-0ba5-4321-a641-e5ddbabbf512"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"63d7be85-b90d-43bd-a6da-9e692eec2eb4"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "0c259f5c-1e72-4853-93ca-9a0b574bf9d4"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->13046078,ExpressionUUID->"eb77d4c8-ae00-439d-9dcf-18d2d5f07184"],
+
+Cell["Here are some examples:", "ExampleText",
+ CellID->61564171,ExpressionUUID->"9cf775fc-8faa-4a41-b7bb-ae7d4555f57a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"LowerArrowMatrix", "[", 
+   RowBox[{"PyramidMatrix", "[", "3", "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[1]:=",
+ CellID->277019524,ExpressionUUID->"f523d4c9-f6bd-4ef0-88a7-ea2c2c0a617e"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0"},
+     {"0", "2", "0"},
+     {"1", "1", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[1]//MatrixForm=",
+ CellID->6716951,ExpressionUUID->"54b144bf-0f87-4b09-b319-5d47bec6653d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"LowerArrowMatrix", "[", 
+   RowBox[{"PyramidMatrix", "[", "4", "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[2]:=",
+ CellID->247541144,ExpressionUUID->"098d1f5d-384f-4540-9d1e-3d9ae1a3c789"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0", "0"},
+     {"0", "0", "0", "0"},
+     {"0", "2", "2", "0"},
+     {"1", "1", "1", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[2]//MatrixForm=",
+ CellID->54952959,ExpressionUUID->"67fa8b90-abcd-4cd8-b38a-380bd2edc793"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"LowerArrowMatrix", "[", 
+   RowBox[{"PyramidMatrix", "[", "5", "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[3]:=",
+ CellID->310433461,ExpressionUUID->"72400987-7bc9-41c1-a3c8-6d7476c02761"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0"},
+     {"0", "0", "3", "0", "0"},
+     {"0", "2", "2", "2", "0"},
+     {"1", "1", "1", "1", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[3]//MatrixForm=",
+ CellID->444997344,ExpressionUUID->"3aa443f6-7208-45ec-90cb-f61525a5c609"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"LowerArrowMatrix", "[", 
+   RowBox[{"PyramidMatrix", "[", "6", "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`NewLinearAlgebraPaclet`"],
+ CellLabel->"In[4]:=",
+ CellID->692532040,ExpressionUUID->"93ebd967-cf30-42c4-b5bd-066e268fa98d"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0"},
+     {"0", "0", "3", "3", "0", "0"},
+     {"0", "2", "2", "2", "2", "0"},
+     {"1", "1", "1", "1", "1", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[4]//MatrixForm=",
+ CellID->93747174,ExpressionUUID->"f492c7e1-e894-47a2-b723-11e08e2c6a61"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[{
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["RightArrowMatrix"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/RightArrowMatrix", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",ExpressionUUID->
+         "57065250-72a6-4fc4-b670-86c02d1a290c"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["TopArrowMatrix"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/TopArrowMatrix", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"577b562d-ad7a-4dc7-8901-00b7cf77397f",ExpressionUUID->
+         "1bf4fd4f-bace-4063-87ce-35eeb0b18fc7"],
+        "\[NonBreakingSpace]",
+        StyleBox[
+        "\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+         "InlineSeparator"],
+        " ",
+        Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["LeftArrowMatrix"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/ref/LeftArrowMatrix", 
+           "PeterBurbery Package Symbol"},
+          "PackageLink",
+          BaseStyle->"InlineFormula"]], "InlineFormula",
+         FontFamily->"Source Sans Pro",
+         CellTags->"29977a0f-c19d-4fec-9797-35e8d315f323",ExpressionUUID->
+         "a54b5d11-bc62-4783-896a-21c8daabe32d"]
+       }], "SeeAlso",ExpressionUUID->"5712877c-77a9-4197-b176-2ef25a9a8200"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"ed0e5d3d-cce3-4524-908b-\
+a580ffd2ce3f"],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"Related", " ", "Guides"}], "MoreAboutSection"]},
+      {
+       RowBox[{"\[FilledVerySmallSquare]", Cell[BoxData[
+         TemplateBox[{
+           Cell[
+            TextData["Matrices"]], 
+           "paclet:PeterBurbery/NewLinearAlgebraPaclet/guide/Matrices"},
+          "RefLinkPlain",
+          BaseStyle->{"MoreAbout"}]], "MoreAbout",ExpressionUUID->
+         "7e2c1fc8-6a0b-4ede-950c-5e1d57d3eacd"]}]}
+     }]}
+  }]], "MoreAboutSection",ExpressionUUID->"aac12150-2822-4f4b-bb4c-\
+c264a96e54c2"],
+
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "RelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "Beecrowd Programming Challenge 1188 Inferior Area"}]]]], 
+            "https://www.beecrowd.com.br/judge/en/problems/view/1188"},
+           "WebLink",
+           BaseStyle->{"RelatedLinks"}]],ExpressionUUID->
+          "456ab525-11f5-4d82-b56a-1583c89317ab"]}]],ExpressionUUID->
+        "c57804b6-baf8-46bd-97fe-6e9be0e130a7"]], "RelatedLinks",
+        ExpressionUUID->"79e556be-5f31-4315-a822-9a43eeb6c27b"]}
+     }]}
+  }]], "RelatedLinksSection",ExpressionUUID->"3d0f4e17-c27f-4651-b142-\
+7f79df4a9221"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"3ae4028d-a1b5-4419-a751-66b783a08ff5"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 557},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"LowerArrowMatrix",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 9, 2, 8, 55, 31.4937654}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`NewLinearAlgebraPaclet`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ New Linear Algebra Paclet Symbol", "language" -> 
+    "en", "paclet" -> "PeterBurbery/NewLinearAlgebraPaclet", "status" -> 
+    "None", "summary" -> 
+    "LowerArrowMatrix[matrix] forms a lower arrow matrix from matrix.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "LowerArrowMatrix", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "LowerArrowMatrix", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/NewLinearAlgebraPaclet/ref/LowerArrowMatrix"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 27, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (July 27, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"ae14654c-1772-4eb9-9efe-8b8e6204e0ee"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7994, 209, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"994c4af1-2ac0-4c01-97dc-3a122df8b19b",
+   CellTags->"PrimaryExamplesSection",
+   CellID->564704567]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 21618, 590}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[591, 21, 5747, 139, 57, "AnchorBarGrid",ExpressionUUID->"8671451f-a300-4e49-9be2-064a0b32b1b4",
+ CellID->1],
+Cell[6341, 162, 118, 0, 23, "ContextNameCell",ExpressionUUID->"32e3d65e-295d-4bab-aa62-d53d57bb3b05"],
+Cell[CellGroupData[{
+Cell[6484, 166, 559, 14, 56, "ObjectNameGrid",ExpressionUUID->"bdc19f4a-33cd-4dcc-a59a-8997682d9b2d"],
+Cell[7046, 182, 911, 22, 111, "Usage",ExpressionUUID->"7e7249f8-efe0-427e-9bfe-f4a9c6bc3fc9",
+ CellID->502498013]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7994, 209, 1420, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"994c4af1-2ac0-4c01-97dc-3a122df8b19b",
+ CellTags->"PrimaryExamplesSection",
+ CellID->564704567],
+Cell[9417, 248, 226, 4, 26, "Input",ExpressionUUID->"d1018283-7e1a-4dc1-aa28-ed30ac6dec1c",
+ CellID->34513200],
+Cell[CellGroupData[{
+Cell[9668, 256, 1397, 36, 30, "ExampleSection",ExpressionUUID->"eb77d4c8-ae00-439d-9dcf-18d2d5f07184",
+ CellID->13046078],
+Cell[11068, 294, 120, 1, 38, "ExampleText",ExpressionUUID->"9cf775fc-8faa-4a41-b7bb-ae7d4555f57a",
+ CellID->61564171],
+Cell[CellGroupData[{
+Cell[11213, 299, 305, 6, 26, "Input",ExpressionUUID->"f523d4c9-f6bd-4ef0-88a7-ea2c2c0a617e",
+ CellID->277019524],
+Cell[11521, 307, 622, 18, 76, "Output",ExpressionUUID->"54b144bf-0f87-4b09-b319-5d47bec6653d",
+ CellID->6716951]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12180, 330, 305, 6, 26, "Input",ExpressionUUID->"098d1f5d-384f-4540-9d1e-3d9ae1a3c789",
+ CellID->247541144],
+Cell[12488, 338, 665, 19, 92, "Output",ExpressionUUID->"67fa8b90-abcd-4cd8-b38a-380bd2edc793",
+ CellID->54952959]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13190, 362, 305, 6, 26, "Input",ExpressionUUID->"72400987-7bc9-41c1-a3c8-6d7476c02761",
+ CellID->310433461],
+Cell[13498, 370, 718, 20, 107, "Output",ExpressionUUID->"3aa443f6-7208-45ec-90cb-f61525a5c609",
+ CellID->444997344]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14253, 395, 305, 6, 70, "Input",ExpressionUUID->"93ebd967-cf30-42c4-b5bd-066e268fa98d",
+ CellID->692532040],
+Cell[14561, 403, 779, 21, 123, "Output",ExpressionUUID->"f492c7e1-e894-47a2-b723-11e08e2c6a61",
+ CellID->93747174]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[15582, 433, 2153, 55, 70, "SeeAlsoSection",ExpressionUUID->"ed0e5d3d-cce3-4524-908b-a580ffd2ce3f"],
+Cell[17738, 490, 739, 19, 70, "MoreAboutSection",ExpressionUUID->"aac12150-2822-4f4b-bb4c-c264a96e54c2"],
+Cell[18480, 511, 1117, 31, 70, "RelatedLinksSection",ExpressionUUID->"3d0f4e17-c27f-4651-b142-7f79df4a9221"],
+Cell[19600, 544, 78, 0, 70, "FooterCell",ExpressionUUID->"3ae4028d-a1b5-4419-a751-66b783a08ff5"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

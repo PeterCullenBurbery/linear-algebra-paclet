@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "1ebfaffc0ce44a37102487685adb1cbbd59769738eed248ca62bdca8ab16177c"
+            "8e42e9fc50b339fd3ca6520c0081e8271318dfded867feb409d0ec5a8491e4c4"
                 
         |>
         ,
@@ -24,7 +24,7 @@
             ,
             "Hash"
             ->
-            "2488a426fee91e1a18542de2949e545737bf81fbc47c0be7c9dfc83015d9fc72"
+            "382f96db1683e01b5403d806513c48e6d6cbfac25bc38f82a33732a8263c27fc"
                 
         |>
         ,
@@ -38,7 +38,21 @@
             ,
             "Hash"
             ->
-            "d4381c08d4fd77d58ec2c002882137b333264bd2c1990df6f35d3c4442329c5b"
+            "a0331788957a8aee4f9c1c949a535abb79ba1efcec12284e46a0fd0391a12ae3"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\AntidiagonalMatrixQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "13959eec9de9cbe5a78beab44168b9acbe77e48161e76dca86bb671509c152e4"
                 
         |>
         ,
@@ -80,7 +94,7 @@
             ,
             "Hash"
             ->
-            "44f42fab5ab875cadfc6e59b55e298a08dcecaf64318689d8a4b02cd9f548c0b"
+            "7cd8be9242acfeba3ff05d2852a03a136addc08aaca13e8c3a7419a4021e6a71"
                 
         |>
         ,
@@ -95,6 +109,48 @@
             "Hash"
             ->
             "3b687e56839c752b0e4369005f5998a032694ba97191a4d3d4b6570e8cfe0194"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\LeftArrowMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "6de32ff08b23d4d1568eb8dcc50e8102b1a4e4841bc4f398888244f18d8162a8"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\LowerArrowMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "1539620275613d25357ed570177aa1d1e78ea6e4e3b2fb5e13a7bea3d8bdcd7d"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\LowerRightTriangularize.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "26a82a9f42e57a381331636020927aefbcb0fb7c113b34297d6123e6e6d568d8"
                 
         |>
         ,
@@ -130,13 +186,69 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\ReflectedDiagonalMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "c9d2914a7496000a7597906568ce25bc7a3ad1df1f8bce345cd4bf1189561622"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\RightArrowMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "e0707a6f3facd819cc4a8c3ebebf5126d8925f7a6c8f9ce5cd84e4cd4bb8685e"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\TopArrowMatrix.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "d08283020e2af31546e5160c56485fb3b63447b4e21a84d4b8b2744ad8d2197b"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\UlamMatrix.nb"
                     
             ]
             ,
             "Hash"
             ->
-            "91acd3ac212e31289af6d2519cb187ecaaf039db99f3f123a7a7f99a8678031d"
+            "6d5e1f159e18d7361de992c6c705ee9f08011a95e1211a3b4b517b3d111c10e9"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\UpperLeftTriangularize.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "dd32874f3fdf73995aa8f9a4f214035e9e89ea6adfafa4f23ff761976dcc1ab6"
                 
         |>
     }
