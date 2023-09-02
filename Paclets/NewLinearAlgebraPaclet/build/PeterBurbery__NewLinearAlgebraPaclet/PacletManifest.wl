@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "8e42e9fc50b339fd3ca6520c0081e8271318dfded867feb409d0ec5a8491e4c4"
+            "16768990a96bdb0e6a589191d36073902fb0672bc7abd39762528b6846f19ba0"
                 
         |>
         ,
@@ -24,7 +24,21 @@
             ,
             "Hash"
             ->
-            "382f96db1683e01b5403d806513c48e6d6cbfac25bc38f82a33732a8263c27fc"
+            "cdf56cbb389505b1d4b05f9e90a1838c611f795d93cff525795c665849e77108"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\AntidiagonallySymmetrizableMatrixQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "f40891c0788c0876facf0cd9462c7f7fe3606eedfe85c89e12cbb4b181696979"
                 
         |>
         ,
@@ -67,6 +81,20 @@
             "Hash"
             ->
             "73f13fd99e18bef75b472e1a90bbc794341574ab026365bd90f1d78a471f7b81"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\AntidiagonalTranspose.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "1a3d0b7c9238d0a5b836f97bc4f284525e49e67609495188f35b66812716f5d0"
                 
         |>
         ,
@@ -151,6 +179,20 @@
             "Hash"
             ->
             "26a82a9f42e57a381331636020927aefbcb0fb7c113b34297d6123e6e6d568d8"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\LowerRightTriangularMatrixQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "759f8e1a919f54a6fd2f4c2aaa7631bd7c315556c9f8f762700d155540664e43"
                 
         |>
         ,
@@ -249,6 +291,20 @@
             "Hash"
             ->
             "dd32874f3fdf73995aa8f9a4f214035e9e89ea6adfafa4f23ff761976dcc1ab6"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\UpperLeftTriangularMatrixQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "76513a8b20cb56eaa6a3ff6e3e4e1e5d130deef1ebea26f79ab9186937b74ce6"
                 
         |>
     }

@@ -17,6 +17,10 @@ PeterBurbery`NewLinearAlgebraPaclet`AntidiagonalMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`AntidiagonalMatrixQ;
 
+PeterBurbery`NewLinearAlgebraPaclet`AntidiagonallySymmetrizableMatrixQ;
+
+PeterBurbery`NewLinearAlgebraPaclet`AntidiagonalTranspose;
+
 PeterBurbery`NewLinearAlgebraPaclet`DesymmetrizedMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`DeTriangularizableMatrixQ;
@@ -28,6 +32,8 @@ PeterBurbery`NewLinearAlgebraPaclet`LeftArrowMatrix;
 PeterBurbery`NewLinearAlgebraPaclet`LowerArrowMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`LowerRightTriangularize;
+
+PeterBurbery`NewLinearAlgebraPaclet`LowerRightTriangularMatrixQ;
 
 PeterBurbery`NewLinearAlgebraPaclet`MatrixSymmetrizability;
 
@@ -42,6 +48,8 @@ PeterBurbery`NewLinearAlgebraPaclet`TopArrowMatrix;
 PeterBurbery`NewLinearAlgebraPaclet`UlamMatrix;
 
 PeterBurbery`NewLinearAlgebraPaclet`UpperLeftTriangularize;
+
+PeterBurbery`NewLinearAlgebraPaclet`UpperLeftTriangularMatrixQ;
 
 
 Begin["`Private`"];
@@ -77,6 +85,25 @@ AntidiagonalMatrixQ[mat_, opts : OptionsPattern[]] :=
  If[MatrixQ[mat], DiagonalMatrixQ[Reverse[mat, 2], opts], False]
 AntidiagonalMatrixQ[mat_, k_Integer, opts : OptionsPattern[]] := 
  If[MatrixQ[mat], DiagonalMatrixQ[Reverse[mat, 2], k, opts], False]
+
+AntidiagonallySymmetrizableMatrixQ // ClearAll
+
+AntidiagonallySymmetrizableMatrixQ::usage = 
+  "AntidiagonallySymmetrizableMatrixQ[matrix] returns True if matrix is symmetric when reflected across the antidiagonal, and False otherwise.";
+
+AntidiagonallySymmetrizableMatrixQ[matrix_] := False
+
+AntidiagonallySymmetrizableMatrixQ[matrix_?MatrixQ] := 
+ AntidiagonalTranspose[matrix] === matrix
+
+AntidiagonalTranspose // ClearAll
+
+AntidiagonalTranspose::usage = 
+  "AntidiagonalTranspose[matrix] transposes matrix around the \
+antidiagonal.";
+
+AntidiagonalTranspose[
+  matrix_] := Transpose[(Reverse /@ Reverse[matrix])]
 
 DesymmetrizedMatrix // ClearAll
 
@@ -132,6 +159,17 @@ LowerRightTriangularize[matrix_?MatrixQ, antidiagonal_ : 0] :=
 LowerRightTriangularize::usage = 
   "LowerRightTriangularize[matrix] makes a triangular matrix with a \
 triangle starting from the lower right.\nLowerRightTriangularize[matrix, antidiagonal] makes a triangular matrix with a triangle starting from the lower right and with the antidiagonal specified by antidiagonal.";
+
+LowerRightTriangularMatrixQ // ClearAll
+
+LowerRightTriangularMatrixQ::usage = 
+  "LowerRightTriangularMatrixQ[matrix] returns True if matrix is a \
+lower right triangular matrix, and False otherwise.";
+
+LowerRightTriangularMatrixQ[matrix_] := False
+
+LowerRightTriangularMatrixQ[matrix_?MatrixQ] := 
+ UpperTriangularMatrixQ[Reverse[matrix]]
 
 MatrixSymmetrizability//ClearAll
 
@@ -252,6 +290,18 @@ UpperLeftTriangularize[matrix_?MatrixQ, antidiagonal_ : 0] :=
 
 UpperLeftTriangularize::usage = 
   "UpperLeftTriangularize[matrix] makes a triangular matrix with a triangle starting from the upper left.\nUpperLeftTriangularize[matrix, antidiagonal] makes a triangular matrix with a triangle starting from the upper left and with the antidiagonal specified by antidiagonal.";
+
+
+UpperLeftTriangularMatrixQ // ClearAll
+
+UpperLeftTriangularMatrixQ::usage = 
+  "UpperLeftTriangularMatrixQ[matrix] returns True if matrix is an \
+upper left triangular matrix, and False otherwise.";
+
+UpperLeftTriangularMatrixQ[matrix_] := False
+
+UpperLeftTriangularMatrixQ[matrix_?MatrixQ] := 
+ LowerTriangularMatrixQ[Reverse[matrix]]
 
 (* ::Section::Closed:: *)
 (*Package Footer*)
